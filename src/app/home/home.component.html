@@ -1,3 +1,23 @@
-<p>
-  homepage
-</p>
+<div class="wholePage">
+  <app-header></app-header>
+  <div class="content" style="margin: 30px;">
+  <div style="font-size: 26px; margin-top: 50px">
+    Willkommen
+  </div>
+  <div id="genderSelection">
+    <button (click)="selectGender('male')" style="height: 30px; width: 50%; border-radius: 10px; margin-top: 20px;">Male</button>
+    <button (click)="selectGender('female')" style="height: 30px; width: 50%; border-radius: 10px; margin-top: 20px;">Female</button>
+  </div>
+  <div>
+    <label style="margin-top: 20px;" for="username">Username:</label>
+    <input style="margin-top: 20px;" type="text" id="username" [(ngModel)]="selectedUsername" placeholder="Nutzername">
+  </div>
+  <div>
+    <label style="margin-top: 20px;" for="goal">Ziel eingeben:</label>
+    <select style="margin-top: 20px;" id="goal" [(ngModel)]="selectedGoal">
+      <option value="buildMuscles">Muskeln aufbauen</option>
+      <option value="loseWeight">Abnehmen</option>
+    </select>
+  </div>
+</div>
+</div>
