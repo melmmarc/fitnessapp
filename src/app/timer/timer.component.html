@@ -1,6 +1,14 @@
 <div class="wholePage">
     <app-header></app-header>
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
+
+      <div>
+        <h1>Stopwatch</h1>
+        <p>{{ formatTime() }}</p>
+        <button (click)="startTimer()" [disabled]="isRunning">Start</button>
+        <button (click)="stopTimer()" [disabled]="!isRunning">Stop</button>
+        <button (click)="resetTimer()">Reset</button>
+      </div>
     
       <div class="menu">
         <button (click)="goToMenu()">
