@@ -15,7 +15,7 @@ export class TimerComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.startTimer();
+    
   }
 
   ngOnDestroy() {
