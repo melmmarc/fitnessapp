@@ -6,9 +6,9 @@
         <h1 style="text-align: center; margin-top: 15vh;">Stoppuhr</h1>
         <p style="font-size: 80px; text-align: center;">{{ formatTime() }}</p>
         <div class="buttons" style="text-align: center;">
-          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 3px; height: 30px; border-radius: 10px;">Start</button>
-          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-right: 3px; height: 30px; border-radius: 10px;">Stop</button>
-          <button (click)="resetTimer()" style="width: 25vw; height: 30px; border-radius: 10px;">Zurücksetzen</button>
+          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 5px; height: 35px; border-radius: 10px;">Start</button>
+          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-left: 5px; margin-right: 5px; height: 35px; border-radius: 10px;">Stop</button>
+          <button (click)="resetTimer()" style="width: 25vw; height: 35px; border-radius: 10px; margin-left: 5px;">Zurücksetzen</button>
         </div>
       </div>
     
