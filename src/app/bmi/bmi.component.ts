@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class BmiComponent {
 
-  height:number = 0;
-  weight:number = 0;
+  height:number = 180;
+  weight:number = 80;
   bmi: number= 0;
 
   constructor(private router: Router) {}
