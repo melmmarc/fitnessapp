@@ -1,7 +1,7 @@
 <div class="wholePage">
   <app-header></app-header>
   <div class="content" style="margin: 30px;">
-  <div style="font-size: 26px; margin-top: 50px">
+  <div style="font-size: 26px; margin-top: 50px; text-align: center;">
     Willkommen!
   </div>
   <div id="genderSelection">
@@ -9,14 +9,27 @@
     <button (click)="selectGender('female')" style="height: 30px; width: 50%; border-radius: 10px; margin-top: 20px;">Female</button>
   </div>
   <div>
-    <label style="margin-top: 20px;" for="username">Username:</label>
+    <label style="margin-top: 20px;" for="username">Benutzername:</label>
     <input style="margin-top: 20px;" type="text" id="username" [(ngModel)]="selectedUsername" placeholder="Nutzername">
   </div>
   <div>
-    <label style="margin-top: 20px;" for="goal">Ziel eingeben:</label>
+    <label style="margin-top: 20px;" for="goal">Ziel:</label>
     <select style="margin-top: 20px;" id="goal" [(ngModel)]="selectedGoal">
       <option value="buildMuscles">Muskeln aufbauen</option>
-      <option value="loseWeight">Abnehmen</option>
+      <option value="loseWeight">Gewicht verlieren</option>
+      <option value="both">Beides</option>
+    </select>
+  </div>
+  <div>
+    <label style="margin-top: 20px;" for="goal">Trainingsfrequenz:</label>
+    <select style="margin-top: 20px;" id="goal" [(ngModel)]="selectedGoal">
+      <option value="1">1x / Woche</option>
+      <option value="2">2x / Woche</option>
+      <option value="3">3x / Woche</option>
+      <option value="4">4x / Woche</option>
+      <option value="5">5x / Woche</option>
+      <option value="6">6x / Woche</option>
+      <option value="7">7x / Woche</option>
     </select>
   </div>
 </div>
