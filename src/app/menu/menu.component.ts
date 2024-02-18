@@ -14,4 +14,20 @@ export class MenuComponent {
     this.router.navigate([route]);
   }
 
+  goToMenu(){
+    this.router.navigateByUrl('/menu');
+  }
+
+  goToLocation(){
+    this.router.navigateByUrl('/location');
+  }
+
+  goToBMI(){
+    this.router.navigateByUrl('/bmi');
+  }
+
+  goToTimer(){
+    this.router.navigateByUrl('/timer');
+  }
+
 }
