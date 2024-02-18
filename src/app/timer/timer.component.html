@@ -3,11 +3,13 @@
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
 
       <div>
-        <h1>Stopwatch</h1>
-        <p>{{ formatTime() }}</p>
-        <button (click)="startTimer()" [disabled]="isRunning">Start</button>
-        <button (click)="stopTimer()" [disabled]="!isRunning">Stop</button>
-        <button (click)="resetTimer()">Reset</button>
+        <h1 style="text-align: center; margin-top: 15vh;">Stoppuhr</h1>
+        <p style="font-size: 80px; text-align: center;">{{ formatTime() }}</p>
+        <div class="buttons" style="text-align: center;">
+          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 3px; height: 30px; border-radius: 10px;">Start</button>
+          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-right: 3px; height: 30px; border-radius: 10px;">Stop</button>
+          <button (click)="resetTimer()" style="width: 25vw; height: 30px; border-radius: 10px;">Zurücksetzen</button>
+        </div>
       </div>
     
       <div class="menu">
