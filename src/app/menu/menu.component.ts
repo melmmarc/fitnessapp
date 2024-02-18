@@ -10,4 +10,8 @@ export class MenuComponent {
 
   constructor(private router: Router) {}
 
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
 }
