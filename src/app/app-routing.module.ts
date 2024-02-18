@@ -8,7 +8,10 @@ import { TimerComponent } from './timer/timer.component';
 
 const routes: Routes = [
   { 
-    path: '', component: HomeComponent 
+    path: '', component: MenuComponent 
+  }, 
+  { 
+    path: 'home', component: HomeComponent 
   }, 
   { 
     path: 'menu', component: MenuComponent 
