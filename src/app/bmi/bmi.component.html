@@ -6,13 +6,16 @@
         <h2 style="text-align: center; margin-top: 25vh;">BMI Rechner</h2>
         <div style="margin-top: 5vh;">
           <label for="height">Größe (cm):</label>
-          <input type="number" id="height" [(ngModel)]="height" style="height: 30px; border-radius: 10px;" required>
+          <input type="number" id="height" [(ngModel)]="height" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right" required>
+        </div>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+          <p style="opacity: 0;">spaceholder</p>
         </div>
         <div style="margin-top: 1vh;">
           <label for="weight">Gewicht (kg):</label>
-          <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; border-radius: 10px;" required>
+          <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right;" required>
         </div>
-        <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
+        <div style="margin-left: auto; margin-right: auto; margin-top: 10vh; width: fit-content">
         <button (click)="calculateBMI()" style="height: 30px; width: 49vw; border-radius: 10px;">BMI berechnen</button>
         </div>
         <div *ngIf="bmi" style="text-align: center; margin-top: 5vh;">
