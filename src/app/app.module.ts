@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { LocationComponent } from './location/location.component';
+import { BmiComponent } from './bmi/bmi.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     HeaderComponent,
     MenuComponent,
+    LocationComponent,
+    BmiComponent,
+    TimerComponent,
   ],
   imports: [
     BrowserModule,
