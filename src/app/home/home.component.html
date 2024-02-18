@@ -1,12 +1,16 @@
 <div class="wholePage">
   <app-header></app-header>
-  <div class="content" style="margin: 30px;">
-  <div style="font-size: 26px; margin-top: 50px; text-align: center;">
+  <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
+  <div style="font-size: 26px; padding-top: 50px; text-align: center;">
     Willkommen!
   </div>
   <div id="genderSelection">
-    <button (click)="selectGender('male')" style="height: 30px; width: 50%; border-radius: 10px; margin-top: 20px;">Male</button>
-    <button (click)="selectGender('female')" style="height: 30px; width: 50%; border-radius: 10px; margin-top: 20px;">Female</button>
+    <button (click)="selectGender('male')" 
+            [class.selected]="selectedGender === 'male'" 
+            style="height: 30px; width: 49%; border-radius: 10px; margin-top: 20px; margin-right: 2px;">Mann</button>
+    <button (click)="selectGender('female')" 
+            [class.selected]="selectedGender === 'female'" 
+            style="height: 30px; width: 49%; border-radius: 10px; margin-top: 20px; margin-left: 2px;">Frau</button>
   </div>
   <div>
     <label style="margin-top: 20px;" for="username">Benutzername:</label>
@@ -32,5 +36,8 @@
       <option value="7">7x / Woche</option>
     </select>
   </div>
+
+  <button (click)="goToMenu()" 
+            style="height: 30px; width: 100%; border-radius: 10px; margin-top: 60vh;">Weiter</button>
 </div>
 </div>

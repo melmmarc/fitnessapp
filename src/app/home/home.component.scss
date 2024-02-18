@@ -7,5 +7,10 @@
     margin: 0 !important;
     padding: 0 !important;
   }
+
+  .selected {
+    background-color: hsla(203, 94%, 20%);;
+    color: white; // Change text color to maintain visibility
+  }
   
 

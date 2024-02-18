@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  constructor(private router: Router) {}
+
   selectedGender: string = ''; // Initial value
   selectedUsername: string = ''; // Initial value
   selectedGoal: string = ''; // Initial value
@@ -23,5 +27,9 @@ export class HomeComponent {
   selectGoal(goal: string) {
     this.selectedGoal = goal;
     console.log('Selected goal: ', this.selectedGoal);
+  }
+
+  goToMenu() {
+    this.router.navigateByUrl('/menu');
   }
 }
