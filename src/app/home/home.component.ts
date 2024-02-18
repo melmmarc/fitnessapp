@@ -10,14 +10,8 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  selectedGender: string = ''; // Initial value
-  selectedUsername: string = ''; // Initial value
-  selectedGoal: string = ''; // Initial value
-
-  selectGender(gender: string) {
-    this.selectedGender = gender;
-    console.log('Selected gender: ', this.selectedGender);
-  }
+  selectedUsername: string = ''; 
+  selectedGoal: string = ''; 
 
   updateUsername(username: string) {
     this.selectedUsername = username;

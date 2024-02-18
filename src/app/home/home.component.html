@@ -4,14 +4,40 @@
   <div style="font-size: 26px; padding-top: 50px; text-align: center;">
     Willkommen!
   </div>
-  <div id="genderSelection">
-    <button (click)="selectGender('male')" 
-            [class.selected]="selectedGender === 'male'" 
-            style="height: 35px; width: 49%; border-radius: 10px; margin-top: 20px; margin-right: 2px;">Mann</button>
-    <button (click)="selectGender('female')" 
-            [class.selected]="selectedGender === 'female'" 
-            style="height: 35px; width: 49%; border-radius: 10px; margin-top: 20px; margin-left: 2px;">Frau</button>
+
+  <div class="avatars" style="text-align: center; margin-top: 3vh;">
+  <img
+      src="../../assets/images/newavatars/male/male1.png"
+      width="100"
+      style="border-radius: 50%; margin-right: 8px;"
+    />
+    <img
+      src="../../assets/images/newavatars/male/male4.png"
+      width="100"
+      style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+    />
+    <img
+      src="../../assets/images/newavatars/male/male5.png"
+      width="100"
+      style="border-radius: 50%; margin-left: 8px;"
+    />
+    <img
+      src="../../assets/images/newavatars/female/female2.png"
+      width="100"
+      style="border-radius: 50%; margin-right: 8px;"
+    />
+    <img
+    src="../../assets/images/newavatars/female/female3.png"
+      width="100"
+      style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+    />
+    <img
+    src="../../assets/images/newavatars/female/female5.png"
+      width="100"
+      style="border-radius: 50%; margin-left: 8px;"
+    />
   </div>
+
   <div>
     <label style="margin-top: 20px;" for="username">Benutzername:</label>
     <input style="margin-top: 20px; height: 30px; border-radius: 10px;" type="text" id="username" [(ngModel)]="selectedUsername" placeholder="Nutzername">
