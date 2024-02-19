@@ -12,6 +12,9 @@ import { BmiComponent } from './bmi/bmi.component';
 import { TimerComponent } from './timer/timer.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AccountComponent } from './account/account.component';
+import { ChangeavatarComponent } from './changeavatar/changeavatar.component';
+import { ChangeusernameComponent } from './changeusername/changeusername.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { AccountComponent } from './account/account.component';
     TimerComponent,
     SettingsComponent,
     AccountComponent,
+    ChangeavatarComponent,
+    ChangeusernameComponent,
+    ChangepasswordComponent,
   ],
   imports: [
     BrowserModule,
