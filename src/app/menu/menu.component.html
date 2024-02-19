@@ -2,11 +2,11 @@
     <app-header></app-header>
     <div class="content" style="padding-left: 2vw; padding-right: 2vw; height: 94vh">
 
-      <p style="font-size: 20px; text-align: center; margin-top: 5vh;">
+      <p style="font-size: 20px; text-align: center; margin-top: 5vh">
         Willkommen BENUTZERNAME!
       </p>
 
-      <div class="avatars" style="text-align: center; margin-top: 3vh;">
+      <div class="avatars" style="text-align: center; margin-top: 0vh;">
         <img
             *ngIf="male1selected==true"
             src="../../assets/images/menu-avatars/male/male1.png"
@@ -45,23 +45,23 @@
           />
         </div>
 
-        <div>
+        <div *ngIf="gymday == true">
           <p style="text-align: center; margin-top: 3vh;">
             Heute steht Krafttraining an!
           </p>
         </div>
-        <div>
+        <div *ngIf="cardioday == true">
           <p style="text-align: center; margin-top: 3vh;">
             Heute steht Ausdauertraining an!
           </p>
         </div>
-        <div>
-          <p style="text-align: center; margin-top: 3vh;">
+        <div *ngIf="restday == true">
+          <p style="text-align: center; margin-top: 3vh; line-height: 1.5;">
             Heute steht nichts an, ruhe dich aus <br> für das nächste Training!
           </p>
         </div>
 
-        <table style="margin-top: 20px; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <table style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
           <tr>
               <th style="padding-bottom: 10px;">Muskelgruppe</th>
               <th style="padding-bottom: 10px;">Übung</th>

@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
 
+  gymday:boolean = true;
+  cardioday:boolean = false;
+  restday:boolean = false;
+
   male1selected:boolean = false;
   male4selected:boolean = true;
   male5selected:boolean = false;
