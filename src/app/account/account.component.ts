@@ -49,4 +49,8 @@ export class AccountComponent {
     this.router.navigateByUrl('/changebackground');
   }
 
+  goToSettings(){
+    this.router.navigateByUrl('/settings');
+  }
+
 }

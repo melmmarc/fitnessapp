@@ -30,4 +30,8 @@ export class ChangepasswordComponent {
     this.router.navigateByUrl('/settings');
   }
 
+  goToAccount(){
+    this.router.navigateByUrl('/account');
+  }
+
 }

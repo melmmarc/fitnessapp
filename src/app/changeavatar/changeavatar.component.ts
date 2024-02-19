@@ -31,6 +31,10 @@ export class ChangeavatarComponent {
     this.router.navigateByUrl('/settings');
   }
 
+  goToAccount(){
+    this.router.navigateByUrl('/account');
+  }
+
   
 
 }
