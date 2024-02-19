@@ -8,8 +8,91 @@
     </div>
 
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
-
-      
+    
+      <div>
+        <p style="text-align: center;">Wähle einen neuen Avatar aus:</p>
+      </div>
+    
+      <div class="avatars" style="text-align: center; margin-top: 3vh;">
+      <img
+          (click)="toggleMale1()"
+          *ngIf="male1Selected == false"
+          src="../../assets/images/newavatars/male/male1.png"
+          width="90vw"
+          style="border-radius: 50%; margin-right: 8px;"
+        />
+        <img
+          *ngIf="male1Selected == true"
+          src="../../assets/images/newavatars/male/male1selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-right: 8px;"
+        />
+        <img
+          *ngIf="male4Selected == false"
+          (click)="toggleMale4()"
+          src="../../assets/images/newavatars/male/male4.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+        />
+        <img
+          *ngIf="male4Selected == true"
+          src="../../assets/images/newavatars/male/male4selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+        />
+        <img
+          *ngIf="male5Selected == false"
+          (click)="toggleMale5()"
+          src="../../assets/images/newavatars/male/male5.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px;"
+        />
+        <img
+          *ngIf="male5Selected == true"
+          src="../../assets/images/newavatars/male/male5selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px;"
+        />
+        <img
+          *ngIf="female2Selected == false"
+          (click)="toggleFemale2()"
+          src="../../assets/images/newavatars/female/female2.png"
+          width="90vw"
+          style="border-radius: 50%; margin-right: 8px;"
+        />
+        <img
+          *ngIf="female2Selected == true"
+          src="../../assets/images/newavatars/female/female2selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-right: 8px;"
+        />
+        <img
+          *ngIf="female3Selected == false"
+          (click)="toggleFemale3()"
+          src="../../assets/images/newavatars/female/female3.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+        />
+        <img
+          *ngIf="female3Selected == true"
+          src="../../assets/images/newavatars/female/female3selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+        />
+        <img
+          *ngIf="female5Selected == false"
+          (click)="toggleFemale5()"
+          src="../../assets/images/newavatars/female/female5.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px;"
+        />
+        <img
+          *ngIf="female5Selected == true"
+          src="../../assets/images/newavatars/female/female5selected.png"
+          width="90vw"
+          style="border-radius: 50%; margin-left: 8px;"
+        />
+      </div>
     
       <div class="menu">
         <button (click)="goToMenu()">
