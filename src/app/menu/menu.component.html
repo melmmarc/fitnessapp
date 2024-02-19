@@ -84,7 +84,7 @@
 
         <!-- KRAFTTRAINING TRAININGSPLAN -->
 
-        <table *ngIf="gymday == true" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <table *ngIf="gymday == true && language=='de'" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
           <tr>
               <th style="padding-bottom: 10px;">Muskelgruppe</th>
               <th style="padding-bottom: 10px;">Übung</th>
@@ -99,7 +99,7 @@
           </tr>
           <tr>
               <td>Brust</td>
-              <td>Butterfly</td>
+              <td>Fliegende</td>
               <td>3</td>
               <td>10-15</td>
           </tr>
@@ -152,6 +152,75 @@
       <td>10-20</td>
     </tr>
       </table>
+
+      <table *ngIf="gymday == true && language=='en'" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <tr>
+            <th style="padding-bottom: 10px;">Musclegroup</th>
+            <th style="padding-bottom: 10px;">Exercise</th>
+            <th style="padding-bottom: 10px;">Sets</th>
+            <th style="padding-bottom: 10px;">Reps</th>
+        </tr>
+        <tr>
+            <td>Chest</td>
+            <td>Benchpress</td>
+            <td>3</td>
+            <td>10-15</td>
+        </tr>
+        <tr>
+            <td>Chest</td>
+            <td>Butterfly</td>
+            <td>3</td>
+            <td>10-15</td>
+        </tr>
+        <tr>
+          <td>Back</td>
+          <td>Lat Pulldown</td>
+          <td>3</td>
+          <td>10-15</td>
+      </tr>
+      <tr>
+        <td>Back</td>
+        <td>Cable Rows</td>
+        <td>3</td>
+        <td>10-15</td>
+    </tr>
+    <tr>
+      <td>Shoulders</td>
+      <td>Lat Raises</td>
+      <td>3</td>
+      <td>10-15</td>
+  </tr>
+  <tr>
+    <td>Biceps</td>
+    <td>SZ-Curls</td>
+    <td>3</td>
+    <td>10-15</td>
+  </tr>
+  <tr>
+    <td>Triceps</td>
+    <td>Triceps Pushdown</td>
+    <td>3</td>
+    <td>10-15</td>
+  </tr>
+  <tr>
+    <td>Legs</td>
+    <td>Legpress</td>
+    <td>3</td>
+    <td>10-15</td>
+  </tr>
+  <tr>
+    <td>Legs</td>
+    <td>Legcurls</td>
+    <td>3</td>
+    <td>10-15</td>
+  </tr>
+  <tr>
+    <td>Abs</td>
+    <td>Crunches</td>
+    <td>3</td>
+    <td>10-20</td>
+  </tr>
+    </table>
 
 <!-- AUSDAUER TRAININGSPLAN -->
 
