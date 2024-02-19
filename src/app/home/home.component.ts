@@ -14,6 +14,7 @@ export class HomeComponent {
   selectedEmail: string = ''; 
   selectedPassword: string = ''; 
   selectedGoal: string = ''; 
+  selectedFrequency: string = ''; 
 
   female2Selected:boolean = false;
   female3Selected:boolean = false;
