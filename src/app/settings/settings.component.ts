@@ -30,4 +30,16 @@ export class SettingsComponent {
     this.router.navigateByUrl('/account');
   }
 
+  logOut(): void {
+    if (confirm('Wollen Sie sich wirklich abmelden?')) {
+      
+    }
+  }
+
+  deleteAccount(): void {
+    if (confirm('Wollen Sie Ihren Account wirklich löschen?')) {
+      
+    }
+  }
+
 }
