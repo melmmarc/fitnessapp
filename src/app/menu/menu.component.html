@@ -61,7 +61,9 @@
           </p>
         </div>
 
-        <table style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <!-- KRAFTTRAINING TRAININGSPLAN -->
+
+        <table *ngIf="gymday == true" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
           <tr>
               <th style="padding-bottom: 10px;">Muskelgruppe</th>
               <th style="padding-bottom: 10px;">Übung</th>
@@ -128,6 +130,47 @@
       <td>3</td>
       <td>10-20</td>
     </tr>
+      </table>
+
+<!-- AUSDAUER TRAININGSPLAN -->
+
+      <table *ngIf="cardioday == true" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Zeit</th>
+          <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Art</th>
+        </tr>
+        <tr>
+          <td style="width: 37vw">5min</td>
+          <td style="width: 37vw">Joggen</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Gehen</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Joggen</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Gehen</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Joggen</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Gehen</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Joggen</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Gehen</td>
+        </tr>
       </table>
     
       <div class="menu">
