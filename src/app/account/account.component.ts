@@ -45,4 +45,8 @@ export class AccountComponent {
     this.router.navigateByUrl('/changepassword');
   }
 
+  goToChangebackground(){
+    this.router.navigateByUrl('/changebackground');
+  }
+
 }
