@@ -10,6 +10,7 @@ import { AccountComponent } from './account/account.component';
 import { ChangeavatarComponent } from './changeavatar/changeavatar.component';
 import { ChangeusernameComponent } from './changeusername/changeusername.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ChangebackgroundComponent } from './changebackground/changebackground.component';
 
 const routes: Routes = [
   { 
@@ -44,6 +45,9 @@ const routes: Routes = [
   },
   { 
     path: 'changepassword', component: ChangepasswordComponent 
+  },
+  { 
+    path: 'changebackground', component: ChangebackgroundComponent 
   },
 ];
 

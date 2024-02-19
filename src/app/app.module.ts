@@ -15,6 +15,7 @@ import { AccountComponent } from './account/account.component';
 import { ChangeavatarComponent } from './changeavatar/changeavatar.component';
 import { ChangeusernameComponent } from './changeusername/changeusername.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ChangebackgroundComponent } from './changebackground/changebackground.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
     ChangeavatarComponent,
     ChangeusernameComponent,
     ChangepasswordComponent,
+    ChangebackgroundComponent,
   ],
   imports: [
     BrowserModule,
