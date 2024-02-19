@@ -1,6 +1,49 @@
 <div class="wholePage">
     <app-header></app-header>
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
+
+      <p style="font-size: 20px; text-align: center; margin-top: 5vh;">
+        Willkommen BENUTZERNAME!
+      </p>
+
+      <div class="avatars" style="text-align: center; margin-top: 3vh;">
+        <img
+            *ngIf="male1selected==true"
+            src="../../assets/images/newavatars/male/male1.png"
+            width="90vw"
+            style="border-radius: 50%; margin-right: 8px;"
+          />
+          <img
+            *ngIf="male4selected==true"
+            src="../../assets/images/newavatars/male/male4.png"
+            width="90vw"
+            style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+          />
+          <img
+            *ngIf="male5selected==true"
+            src="../../assets/images/newavatars/male/male5.png"
+            width="90vw"
+            style="border-radius: 50%; margin-left: 8px;"
+          />
+          <img
+            *ngIf="female2selected==true"
+            src="../../assets/images/newavatars/female/female2.png"
+            width="90vw"
+            style="border-radius: 50%; margin-right: 8px;"
+          />
+          <img
+            *ngIf="female3selected==true"
+            src="../../assets/images/newavatars/female/female3.png"
+            width="90vw"
+            style="border-radius: 50%; margin-left: 8px; margin-right: 8px;"
+          />
+          <img
+            *ngIf="female5selected==true"
+            src="../../assets/images/newavatars/female/female5.png"
+            width="90vw"
+            style="border-radius: 50%; margin-left: 8px;"
+          />
+        </div>
     
       <div class="menu">
         <button (click)="goToMenu()" style="background-color: rgb(1, 39, 62);">
