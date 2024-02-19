@@ -56,13 +56,17 @@
         </div>
 
         <div class="center-container" style="padding-top: 140px !important;">
-          <button (click)="goToChangeavatar()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Avatar ändern</button>
+          <button (click)="goToChangeavatar()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'de'">Avatar ändern</button>
+          <button (click)="goToChangeavatar()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'en'">Change Avatar</button>
         
-          <button (click)="goToChangeusername()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Benutzernamen ändern</button>
+          <button (click)="goToChangeusername()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'de'">Benutzernamen ändern</button>
+          <button (click)="goToChangeusername()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'en'">Change Username</button>
         
-          <button (click)="goToChangepassword()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Passwort ändern</button>
+          <button (click)="goToChangepassword()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'de'">Passwort ändern</button>
+          <button (click)="goToChangepassword()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;" *ngIf="language == 'en'">Change Password</button>
         
-          <button (click)="goToChangebackground()" style="width: 50vw; height: 35px; border-radius: 10px;">Hintergrund ändern</button>
+          <button (click)="goToChangebackground()" style="width: 50vw; height: 35px; border-radius: 10px;" *ngIf="language == 'de'">Hintergrund ändern</button>
+          <button (click)="goToChangebackground()" style="width: 50vw; height: 35px; border-radius: 10px;" *ngIf="language == 'en'">Change Background</button>
 
           <img
             class="german"

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AccountComponent {
 
+  language:string = 'de';
+
   male1selected:boolean = false;
   male4selected:boolean = true;
   male5selected:boolean = false;
