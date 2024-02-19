@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) {}
+  showSettingsIcon: boolean;
+
+  constructor(private router: Router) {
+    this.showSettingsIcon = this.router.url !== '/home';
+  }
 
   goToSettings(){
     this.router.navigateByUrl('/settings');
