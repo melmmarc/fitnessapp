@@ -12,6 +12,10 @@ export class ChangebackgroundComponent {
 
   constructor(private router: Router) {}
 
+  updateBackground(){
+    // code
+  }
+
   goToMenu(){
     this.router.navigateByUrl('/menu');
   }

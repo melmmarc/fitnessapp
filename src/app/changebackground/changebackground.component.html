@@ -67,6 +67,11 @@
       <span style="margin-right: 34px; margin-left: 34px;">1,99€</span>
       <span style="margin-left: 34px;">1,99€</span>
       </div>
+
+      <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
+        <button (click)="updateBackground()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
+        <button (click)="updateBackground()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
+        </div>
     
       <div class="menu">
         <button (click)="goToMenu()">
