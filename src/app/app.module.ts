@@ -11,6 +11,7 @@ import { LocationComponent } from './location/location.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { TimerComponent } from './timer/timer.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SettingsComponent } from './settings/settings.component';
     BmiComponent,
     TimerComponent,
     SettingsComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

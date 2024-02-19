@@ -6,6 +6,7 @@ import { LocationComponent } from './location/location.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { TimerComponent } from './timer/timer.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   { 
@@ -29,6 +30,9 @@ const routes: Routes = [
   { 
     path: 'settings', component: SettingsComponent 
   }, 
+  { 
+    path: 'account', component: AccountComponent 
+  },
 ];
 
 @NgModule({

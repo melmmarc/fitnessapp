@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss']
+  selector: 'app-account',
+  templateUrl: './account.component.html',
+  styleUrls: ['./account.component.scss']
 })
-export class SettingsComponent {
+export class AccountComponent {
 
   constructor(private router: Router) {}
 
@@ -24,10 +24,6 @@ export class SettingsComponent {
 
   goToTimer(){
     this.router.navigateByUrl('/timer');
-  }
-
-  goToAccount(){
-    this.router.navigateByUrl('/account');
   }
 
 }
