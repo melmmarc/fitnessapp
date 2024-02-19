@@ -5,6 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LocationComponent } from './location/location.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { TimerComponent } from './timer/timer.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { 
@@ -24,6 +25,9 @@ const routes: Routes = [
   }, 
   { 
     path: 'timer', component: TimerComponent 
+  }, 
+  { 
+    path: 'settings', component: SettingsComponent 
   }, 
 ];
 

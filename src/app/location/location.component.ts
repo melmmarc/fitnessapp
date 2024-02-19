@@ -26,4 +26,8 @@ export class LocationComponent{
   goToTimer(){
     this.router.navigateByUrl('/timer');
   }
+
+  goToSettings(){
+    this.router.navigateByUrl('/settings');
+  }
 }

@@ -37,4 +37,8 @@ export class MenuComponent {
     this.router.navigateByUrl('/timer');
   }
 
+  goToSettings(){
+    this.router.navigateByUrl('/settings');
+  }
+
 }

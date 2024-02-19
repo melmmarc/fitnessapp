@@ -61,4 +61,8 @@ export class TimerComponent {
     this.router.navigateByUrl('/timer');
   }
 
+  goToSettings(){
+    this.router.navigateByUrl('/settings');
+  }
+
 }

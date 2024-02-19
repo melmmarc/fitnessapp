@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-bmi',
-  templateUrl: './bmi.component.html',
-  styleUrls: ['./bmi.component.scss']
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.scss']
 })
-export class BmiComponent {
+export class SettingsComponent {
 
   height:number = 180;
   weight:number = 80;
@@ -28,10 +28,6 @@ export class BmiComponent {
 
   goToTimer(){
     this.router.navigateByUrl('/timer');
-  }
-
-  goToSettings(){
-    this.router.navigateByUrl('/settings');
   }
 
   calculateBMI() {
