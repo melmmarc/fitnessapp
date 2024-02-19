@@ -9,7 +9,8 @@
 
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh; text-align: center;">
 
-      <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;">Wähle einen App-Hintergrund aus:</p>
+      <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='de'">Wähle einen App-Hintergrund aus:</p>
+      <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='en'">Select a Background:</p>
 
       <img
       src="../../assets/images/app-bg-new.png"
@@ -30,11 +31,17 @@
       style="border-radius: 10%; margin-left: 8px;"
     />
 
-    <div style="margin-top: 3px; margin-bottom: 20px;">
+    <div style="margin-top: 3px; margin-bottom: 20px;" *ngIf="language=='de'">
     <span style="margin-right: 18px;">Kostenlos</span>
     <span style="margin-right: 18px; margin-left: 18px;">Kostenlos</span>
     <span style="margin-left: 18px;">Kostenlos</span>
     </div>
+
+    <div style="margin-top: 3px; margin-bottom: 20px;" *ngIf="language=='en'">
+      <span style="margin-right: 38px;">Free</span>
+      <span style="margin-right: 38px; margin-left: 38px;">Free</span>
+      <span style="margin-left: 38px;">Free</span>
+      </div>
 
     <img
       src="../../assets/images/app-bg-schalke.png"
