@@ -2,8 +2,12 @@
     <app-header></app-header>
     <div class="content" style="padding-left: 2vw; padding-right: 2vw; height: 94vh">
 
-      <p style="font-size: 20px; text-align: center; margin-top: 5vh; margin-bottom: 0vh;">
+      <p style="font-size: 20px; text-align: center; margin-top: 5vh; margin-bottom: 0vh;" *ngIf="language=='de'">
         Willkommen BENUTZERNAME!
+      </p>
+
+      <p style="font-size: 20px; text-align: center; margin-top: 5vh; margin-bottom: 0vh;" *ngIf="language=='en'">
+        Welcome USERNAME!
       </p>
 
       <div class="avatars" style="text-align: center; margin-top: 0vh;">
@@ -45,19 +49,36 @@
           />
         </div>
 
-        <div *ngIf="gymday == true">
+        <div *ngIf="gymday == true && language=='de'">
           <p style="text-align: center; margin-top: 3vh;">
             Heute steht Krafttraining an!
           </p>
         </div>
-        <div *ngIf="cardioday == true">
+        <div *ngIf="gymday == true && language=='en'">
+          <p style="text-align: center; margin-top: 3vh;">
+            Today is Gymday!
+          </p>
+        </div>
+
+        <div *ngIf="cardioday == true && language=='de'">
           <p style="text-align: center; margin-top: 3vh;">
             Heute steht Ausdauertraining an!
           </p>
         </div>
-        <div *ngIf="restday == true">
+        <div *ngIf="cardioday == true && language=='en'">
+          <p style="text-align: center; margin-top: 3vh;">
+            Today is Cardioday!
+          </p>
+        </div>
+
+        <div *ngIf="restday == true && language=='de'">
           <p style="text-align: center; margin-top: 3vh; line-height: 1.5;">
             Heute steht nichts an, ruhe dich aus <br> für das nächste Training!
+          </p>
+        </div>
+        <div *ngIf="restday == true && language=='en'">
+          <p style="text-align: center; margin-top: 3vh; line-height: 1.5;">
+            Today is Restday. <br> Recover for the next Session!
           </p>
         </div>
 
