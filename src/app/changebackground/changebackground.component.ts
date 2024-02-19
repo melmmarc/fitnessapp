@@ -20,10 +20,6 @@ export class ChangebackgroundComponent {
 
   constructor(private router: Router) {}
 
-  updateBackground(){
-    // code
-  }
-
   goToMenu(){
     this.router.navigateByUrl('/menu');
   }
@@ -46,6 +42,40 @@ export class ChangebackgroundComponent {
 
   goToAccount(){
     this.router.navigateByUrl('/account');
+  }
+
+  updateBackground(selection: string) {
+    // Reset all background selections
+    this.blueBGselected = false;
+    this.blackBGselected = false;
+    this.orangeBGselected = false;
+    this.schalkeBGselected = false;
+    this.dortmundBGselected = false;
+    this.bayernBGselected = false;
+
+    // Set the selected background
+    switch (selection) {
+      case 'blue':
+        this.blueBGselected = true;
+        break;
+      case 'black':
+        this.blackBGselected = true;
+        break;
+      case 'orange':
+        this.orangeBGselected = true;
+        break;
+      case 'schalke':
+        this.schalkeBGselected = true;
+        break;
+      case 'dortmund':
+        this.dortmundBGselected = true;
+        break;
+      case 'bayern':
+        this.bayernBGselected = true;
+        break;
+      default:
+        break;
+    }
   }
 
 }

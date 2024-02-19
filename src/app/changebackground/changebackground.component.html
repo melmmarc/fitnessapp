@@ -14,6 +14,7 @@
 
       <span style="background-color: white;" *ngIf="blueBGselected==true">
       <img
+      (click)="updateBackground('blue')"
       src="../../assets/images/app-bg-new.png"
       width="90vw"
       height="160vw"
@@ -30,6 +31,7 @@
 </span>
     <span style="background-color: white;" *ngIf="blackBGselected==true">
     <img
+    (click)="updateBackground('black')"
       src="../../assets/images/app-bg-black.png"
       width="90vw"
       height="160vw"
@@ -46,6 +48,7 @@
       </span>
     <span style="background-color: white;" *ngIf="orangeBGselected==true">
     <img
+    (click)="updateBackground('orange')"
       src="../../assets/images/app-bg-orange.png"
       width="90vw"
       height="160vw"
@@ -75,6 +78,7 @@
 
       <span style="background-color: white;" *ngIf="schalkeBGselected==true">
     <img
+    (click)="updateBackground('schalke')"
       src="../../assets/images/app-bg-schalke.png"
       width="90vw"
       height="160vw"
@@ -91,6 +95,7 @@
   </span>
   <span style="background-color: white;" *ngIf="dortmundBGselected==true">
     <img
+    (click)="updateBackground('dortmund')"
       src="../../assets/images/app-bg-dortmund.png"
       width="90vw"
       height="160vw"
@@ -107,6 +112,7 @@
   </span>
   <span style="background-color: white;" *ngIf="bayernBGselected==true">
     <img
+    (click)="updateBackground('baynern')"
       src="../../assets/images/app-bg-bayern.png"
       width="90vw"
       height="160vw"
@@ -129,8 +135,8 @@
       </div>
 
       <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button (click)="updateBackground()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
-        <button (click)="updateBackground()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
+        <button (click)="updateBackground('blue')" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
+<button (click)="updateBackground('blue')" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
         </div>
     
       <div class="menu">
