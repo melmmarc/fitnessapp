@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangeusernameComponent {
 
+  newUsername: string = ''; // Variable to store the new username
+
   constructor(private router: Router) {}
 
   goToMenu(){
@@ -32,6 +34,13 @@ export class ChangeusernameComponent {
 
   goToAccount(){
     this.router.navigateByUrl('/account');
+  }
+
+  changeUsername() {
+    // Implement logic to update the username using this.newUsername
+    // You can send an HTTP request to your backend to update the username
+    // Provide feedback to the user, e.g., display a message confirming the username change
+    alert('Benutzername erfolgreich geändert!');
   }
 
 }

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangepasswordComponent {
 
+  newPassword: string = ''; 
+
   constructor(private router: Router) {}
 
   goToMenu(){
@@ -32,6 +34,13 @@ export class ChangepasswordComponent {
 
   goToAccount(){
     this.router.navigateByUrl('/account');
+  }
+
+  changePassword() {
+    // Implement logic to update the username using this.newUsername
+    // You can send an HTTP request to your backend to update the username
+    // Provide feedback to the user, e.g., display a message confirming the username change
+    alert('Passwort erfolgreich geändert!');
   }
 
 }

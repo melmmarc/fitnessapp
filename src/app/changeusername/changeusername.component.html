@@ -9,7 +9,20 @@
     
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
 
-      
+      <div>
+        <p style="text-align: center; font-size: 20px; margin-bottom: 5vh; margin-top: 20vh;">Benutzername ändern:</p>
+      </div>
+
+      <!-- Input field for new username -->
+  <div>
+    <label for="newUsername">Neuer Benutzername:</label>
+    <input style="margin-top: 20px; height: 26px; border-radius: 10px; position: relative; float: right; margin-top: -5px; width: 45%" type="text" id="newUsername" name="newUsername" [(ngModel)]="newUsername">
+  </div>
+  
+  <!-- Button to submit username change -->
+  <div style="text-align: center; margin-top: 5vh;">
+  <button style="height: 35px; width: 49vw; border-radius: 10px;" (click)="changeUsername()">Benutzernamen ändern</button>
+</div>   
     
       <div class="menu">
         <button (click)="goToMenu()">
