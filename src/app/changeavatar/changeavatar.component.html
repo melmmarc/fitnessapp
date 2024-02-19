@@ -10,7 +10,8 @@
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
     
       <div>
-        <p style="text-align: center; font-size: 20px; margin-top: 20vh;">Wähle einen neuen Avatar aus:</p>
+        <p style="text-align: center; font-size: 20px; margin-top: 20vh;" *ngIf="language=='de'">Wähle einen neuen Avatar aus:</p>
+        <p style="text-align: center; font-size: 20px; margin-top: 20vh;" *ngIf="language=='en'">Select a new avatar:</p>
       </div>
     
       <div class="avatars" style="text-align: center; margin-top: 3vh;">
@@ -95,7 +96,8 @@
       </div>
 
       <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button (click)="updateAvatar()" style="height: 35px; width: 49vw; border-radius: 10px;">Speichern</button>
+        <button (click)="updateAvatar()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
+        <button (click)="updateAvatar()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
         </div>
     
       <div class="menu">
