@@ -155,17 +155,35 @@
   <div class="flags">
   <img
             class="german"
-            src="../../assets/images/german.png"
-            width="50vw"
-            style="border-radius: 3%; margin-right: 20px"
+            *ngIf="language=='de'"
+            src="../../assets/images/german-selected.png"
+            width="80vw"
+            style="border-radius: 0%; margin-right: 20px"
+            (click)="switchToGerman()"
+          />
+          <img
+          *ngIf="language=='en'"
+            class="german"
+            src="../../assets/images/german-deselected.png"
+            width="60vw"
+            style="border-radius: 0%; margin-right: 20px"
             (click)="switchToGerman()"
           />
 
           <img
+            *ngIf="language=='en'"
             class="english"
-            src="../../assets/images/usa.png"
-            width="55vw"
-            style="border-radius: 3%; margin-left: 20px"
+            src="../../assets/images/usa-selected.png"
+            width="80vw"
+            style="border-radius: 0%; margin-left: 20px"
+            (click)="switchToEnglish()"
+          />
+          <img
+          *ngIf="language=='de'"
+            class="english"
+            src="../../assets/images/usa-deselected.png"
+            width="60vw"
+            style="border-radius: 0%; margin-left: 20px"
             (click)="switchToEnglish()"
           />
       </div>
