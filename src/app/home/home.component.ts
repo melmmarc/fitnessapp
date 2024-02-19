@@ -11,6 +11,8 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   selectedUsername: string = ''; 
+  selectedEmail: string = ''; 
+  selectedPassword: string = ''; 
   selectedGoal: string = ''; 
 
   female2Selected:boolean = false;
