@@ -30,4 +30,8 @@ export class ChangebackgroundComponent {
     this.router.navigateByUrl('/settings');
   }
 
+  goToAccount(){
+    this.router.navigateByUrl('/account');
+  }
+
 }
