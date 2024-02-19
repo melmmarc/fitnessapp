@@ -19,6 +19,18 @@ export class AccountComponent {
 
   constructor(private router: Router) {}
 
+  // Function to change language to German ('de')
+  switchToGerman() {
+    this.language = 'de';
+    // You can add additional logic here if needed
+  }
+
+  // Function to change language to English ('en')
+  switchToEnglish() {
+    this.language = 'en';
+    // You can add additional logic here if needed
+  }
+
   goToMenu(){
     this.router.navigateByUrl('/menu');
   }
