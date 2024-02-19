@@ -224,7 +224,7 @@
 
 <!-- AUSDAUER TRAININGSPLAN -->
 
-      <table *ngIf="cardioday == true" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+      <table *ngIf="cardioday == true && language=='de'" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
         <tr>
           <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Zeit</th>
           <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Art</th>
@@ -260,6 +260,45 @@
         <tr>
           <td>3min</td>
           <td>Gehen</td>
+        </tr>
+      </table>
+
+      <table *ngIf="cardioday == true && language=='en'" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <tr>
+          <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Time</th>
+          <th style="width: 37vw; padding-bottom: 10px; font-weight: bold;">Style</th>
+        </tr>
+        <tr>
+          <td style="width: 37vw">5min</td>
+          <td style="width: 37vw">Jog</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Walk</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Jog</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Walk</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Jog</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Walk</td>
+        </tr>
+        <tr>
+          <td>5min</td>
+          <td>Jog</td>
+        </tr>
+        <tr>
+          <td>3min</td>
+          <td>Walk</td>
         </tr>
       </table>
     
