@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class SettingsComponent {
 
+  language:string = 'de';
+
   constructor(private router: Router) {}
 
   goToMenu(){

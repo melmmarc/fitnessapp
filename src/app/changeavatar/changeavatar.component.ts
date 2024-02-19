@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangeavatarComponent {
 
+  language:string = 'de';
+
   female2Selected:boolean = false;
   female3Selected:boolean = false;
   female5Selected:boolean = false;

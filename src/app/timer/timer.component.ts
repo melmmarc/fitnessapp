@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class TimerComponent {
 
+  language:string = 'de';
+
   time: number = 0;
   timerRef: any;
   isRunning: boolean = false;

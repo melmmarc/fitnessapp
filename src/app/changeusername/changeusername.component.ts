@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangeusernameComponent {
 
+  language:string = 'de';
+
   newUsername: string = ''; // Variable to store the new username
 
   constructor(private router: Router) {}

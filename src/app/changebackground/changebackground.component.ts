@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangebackgroundComponent {
 
+  language:string = 'de';
+
   constructor(private router: Router) {}
 
   goToMenu(){

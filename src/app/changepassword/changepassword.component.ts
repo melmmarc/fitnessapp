@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ChangepasswordComponent {
 
+  language:string = 'de';
+
   newPassword: string = ''; 
 
   constructor(private router: Router) {}

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
 
+  language:string = 'de';
+
   gymday:boolean = true;
   cardioday:boolean = false;
   restday:boolean = false;
