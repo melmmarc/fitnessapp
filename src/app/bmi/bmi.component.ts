@@ -48,6 +48,37 @@ export class BmiComponent {
   }
 
   getBMICategory(bmi: number): string {
+
+    if(this.language=='de')
+    {
+      if (bmi < 16) {
+        return 'Kritisches Untergewicht';
+      } else if (bmi >= 16 && bmi < 18.5) {
+        return 'Untergewicht';
+      } else if (bmi >= 18.5 && bmi < 25) {
+        return 'Normalgewicht';
+      } else if (bmi >= 25 && bmi < 30) {
+        return 'Leichtes Übergewicht';
+      } else {
+        return 'Übergewicht';
+      }
+    }
+
+    if(this.language=='en')
+    {
+      if (bmi < 16) {
+        return 'Critically Underweight';
+      } else if (bmi >= 16 && bmi < 18.5) {
+        return 'Underweight';
+      } else if (bmi >= 18.5 && bmi < 25) {
+        return 'Normal Weight';
+      } else if (bmi >= 25 && bmi < 30) {
+        return 'Slightly Overweight';
+      } else {
+        return 'Overweight';
+      }
+    }
+
     if (bmi < 16) {
       return 'Kritisches Untergewicht';
     } else if (bmi >= 16 && bmi < 18.5) {
