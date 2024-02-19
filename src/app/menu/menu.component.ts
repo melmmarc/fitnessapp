@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
 
-  male1selected:boolean = true;
-  male4selected:boolean = false;
+  male1selected:boolean = false;
+  male4selected:boolean = true;
   male5selected:boolean = false;
   female2selected:boolean = false;
   female3selected:boolean = false;
