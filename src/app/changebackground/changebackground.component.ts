@@ -44,4 +44,5 @@ export class ChangebackgroundComponent {
     this.router.navigateByUrl('/account');
   }
 
+
 }
