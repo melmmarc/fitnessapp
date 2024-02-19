@@ -12,9 +12,8 @@
       <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='de'">Wähle einen App-Hintergrund aus:</p>
       <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='en'">Select a Background:</p>
 
-      <span style="background-color: white;" *ngIf="blueBGselected==true">
+      <span *ngIf="blueBGselected==true">
       <img
-      (click)="updateBackground('blue')"
       src="../../assets/images/app-bg-new.png"
       width="90vw"
       height="160vw"
@@ -29,9 +28,8 @@
     style="border-radius: 10%; margin-right: 8px;"
   />
 </span>
-    <span style="background-color: white;" *ngIf="blackBGselected==true">
+    <span *ngIf="blackBGselected==true">
     <img
-    (click)="updateBackground('black')"
       src="../../assets/images/app-bg-black.png"
       width="90vw"
       height="160vw"
@@ -46,9 +44,8 @@
         style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
       />
       </span>
-    <span style="background-color: white;" *ngIf="orangeBGselected==true">
+    <span *ngIf="orangeBGselected==true">
     <img
-    (click)="updateBackground('orange')"
       src="../../assets/images/app-bg-orange.png"
       width="90vw"
       height="160vw"
@@ -76,9 +73,8 @@
       <span style="margin-left: 38px;">Free</span>
       </div>
 
-      <span style="background-color: white;" *ngIf="schalkeBGselected==true">
+      <span *ngIf="schalkeBGselected==true">
     <img
-    (click)="updateBackground('schalke')"
       src="../../assets/images/app-bg-schalke.png"
       width="90vw"
       height="160vw"
@@ -93,9 +89,8 @@
       style="border-radius: 10%; margin-right: 8px;"
     />
   </span>
-  <span style="background-color: white;" *ngIf="dortmundBGselected==true">
+  <span *ngIf="dortmundBGselected==true">
     <img
-    (click)="updateBackground('dortmund')"
       src="../../assets/images/app-bg-dortmund.png"
       width="90vw"
       height="160vw"
@@ -110,9 +105,8 @@
       style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
     />
   </span>
-  <span style="background-color: white;" *ngIf="bayernBGselected==true">
+  <span *ngIf="bayernBGselected==true">
     <img
-    (click)="updateBackground('baynern')"
       src="../../assets/images/app-bg-bayern.png"
       width="90vw"
       height="160vw"
@@ -135,8 +129,8 @@
       </div>
 
       <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button (click)="updateBackground('blue')" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
-<button (click)="updateBackground('blue')" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
+        <button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
+<button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
         </div>
     
       <div class="menu">
