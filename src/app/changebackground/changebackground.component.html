@@ -12,24 +12,54 @@
       <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='de'">Wähle einen App-Hintergrund aus:</p>
       <p style="text-align: center; font-size: 20px; margin-top: 4vh; margin-bottom: 6vh;" *ngIf="language=='en'">Select a Background:</p>
 
+      <span style="background-color: white;" *ngIf="blueBGselected==true">
       <img
       src="../../assets/images/app-bg-new.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-right: 8px;"
     />
+  </span>
+  <span *ngIf="blueBGselected==false">
+    <img
+    src="../../assets/images/app-bg-new.png"
+    width="90vw"
+    height="160vw"
+    style="border-radius: 10%; margin-right: 8px;"
+  />
+</span>
+    <span style="background-color: white;" *ngIf="blackBGselected==true">
     <img
       src="../../assets/images/app-bg-black.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
     />
+    </span>
+    <span *ngIf="blackBGselected==false">
+      <img
+        src="../../assets/images/app-bg-black.png"
+        width="90vw"
+        height="160vw"
+        style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
+      />
+      </span>
+    <span style="background-color: white;" *ngIf="orangeBGselected==true">
     <img
       src="../../assets/images/app-bg-orange.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-left: 8px;"
     />
+  </span>
+  <span *ngIf="orangeBGselected==false">
+    <img
+      src="../../assets/images/app-bg-orange.png"
+      width="90vw"
+      height="160vw"
+      style="border-radius: 10%; margin-left: 8px;"
+    />
+  </span>
 
     <div style="margin-top: 3px; margin-bottom: 20px;" *ngIf="language=='de'">
     <span style="margin-right: 18px;">Kostenlos</span>
@@ -43,24 +73,54 @@
       <span style="margin-left: 38px;">Free</span>
       </div>
 
+      <span style="background-color: white;" *ngIf="schalkeBGselected==true">
     <img
       src="../../assets/images/app-bg-schalke.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-right: 8px;"
     />
+  </span>
+  <span *ngIf="schalkeBGselected==false">
+    <img
+      src="../../assets/images/app-bg-schalke.png"
+      width="90vw"
+      height="160vw"
+      style="border-radius: 10%; margin-right: 8px;"
+    />
+  </span>
+  <span style="background-color: white;" *ngIf="dortmundBGselected==true">
     <img
       src="../../assets/images/app-bg-dortmund.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
     />
+  </span>
+  <span *ngIf="dortmundBGselected==false">
+    <img
+      src="../../assets/images/app-bg-dortmund.png"
+      width="90vw"
+      height="160vw"
+      style="border-radius: 10%; margin-right: 8px; margin-left: 8px;"
+    />
+  </span>
+  <span style="background-color: white;" *ngIf="bayernBGselected==true">
     <img
       src="../../assets/images/app-bg-bayern.png"
       width="90vw"
       height="160vw"
       style="border-radius: 10%; margin-left: 8px;"
     />
+  </span>
+  <span *ngIf="bayernBGselected==false">
+    <img
+      src="../../assets/images/app-bg-bayern.png"
+      width="90vw"
+      height="160vw"
+      style="border-radius: 10%; margin-left: 8px;"
+    />
+  </span>
 
     <div style="margin-top: 3px; margin-bottom: 20px;">
       <span style="margin-right: 34px;">1,99€</span>

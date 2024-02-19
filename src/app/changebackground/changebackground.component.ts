@@ -10,6 +10,14 @@ export class ChangebackgroundComponent {
 
   language:string = 'de';
 
+  blueBGselected:boolean = true;
+  blackBGselected:boolean = false;
+  orangeBGselected:boolean = false;
+  schalkeBGselected:boolean = false;
+  dortmundBGselected:boolean = false;
+  bayernBGselected:boolean = false;
+
+
   constructor(private router: Router) {}
 
   updateBackground(){
