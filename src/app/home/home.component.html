@@ -1,7 +1,7 @@
 <div class="wholePage">
   <app-header></app-header>
   <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
-  <div style="font-size: 26px; padding-top: 8vh; text-align: center;">
+  <div style="font-size: 26px; padding-top: 3vh; text-align: center;">
     Willkommen!
   </div>
 
@@ -123,12 +123,16 @@
     </select>
   </div>
 
+  <div>
+    <p style="text-align: center; margin-top: 5vh;">Bitte wähle eine Sprache aus:</p>
+  </div>
+
   <div class="flags">
   <img
             class="german"
             src="../../assets/images/german.png"
             width="50vw"
-            style="border-radius: 3%; margin-right: 20px; margin-top: 50px;"
+            style="border-radius: 3%; margin-right: 20px"
             (click)="switchToGerman()"
           />
 
@@ -136,7 +140,7 @@
             class="english"
             src="../../assets/images/usa.png"
             width="55vw"
-            style="border-radius: 3%; margin-left: 20px; margin-top: 50px;"
+            style="border-radius: 3%; margin-left: 20px"
             (click)="switchToEnglish()"
           />
       </div>
