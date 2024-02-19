@@ -10,4 +10,24 @@ export class ChangeusernameComponent {
 
   constructor(private router: Router) {}
 
+  goToMenu(){
+    this.router.navigateByUrl('/menu');
+  }
+
+  goToLocation(){
+    this.router.navigateByUrl('/location');
+  }
+
+  goToBMI(){
+    this.router.navigateByUrl('/bmi');
+  }
+
+  goToTimer(){
+    this.router.navigateByUrl('/timer');
+  }
+
+  goToSettings(){
+    this.router.navigateByUrl('/settings');
+  }
+
 }
