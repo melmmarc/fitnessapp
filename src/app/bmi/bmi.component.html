@@ -5,20 +5,20 @@
       <div class="bmi-calculator">
         <h2 style="text-align: center; margin-top: 25vh;">BMI Rechner</h2>
         <div style="margin-top: 5vh;">
-          <label for="height" style="font-size: 20px;">Größe (cm):</label>
-          <input type="number" id="height" [(ngModel)]="height" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -5px;" required>
+          <label for="height" style="font-size: 18px;">Größe (cm):</label>
+          <input type="number" id="height" [(ngModel)]="height" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;" required>
         </div>
         <div style="margin-top: 10px; margin-bottom: 10px;">
           <p style="opacity: 0;">spaceholder</p>
         </div>
         <div style="margin-top: 1vh;">
-          <label for="weight" style="font-size: 20px;">Gewicht (kg):</label>
-          <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -5px" required>
+          <label for="weight" style="font-size: 18px;">Gewicht (kg):</label>
+          <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px" required>
         </div>
         <div style="margin-left: auto; margin-right: auto; margin-top: 10vh; width: fit-content">
         <button (click)="calculateBMI()" style="height: 35px; width: 49vw; border-radius: 10px;">BMI berechnen</button>
         </div>
-        <div *ngIf="bmi" style="text-align: center; margin-top: 5vh;">
+        <div *ngIf="bmi" style="text-align: center; margin-top: 5vh; font-size: 18px;">
           <h3>Dein BMI: {{ bmi | number:'1.1-1' }}</h3>
           <p>{{ getBMICategory(bmi) }}</p>
         </div>
