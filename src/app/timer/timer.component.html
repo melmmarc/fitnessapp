@@ -3,12 +3,16 @@
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
 
       <div>
-        <h1 style="text-align: center; margin-top: 15vh;">Stoppuhr</h1>
+        <h1 style="text-align: center; margin-top: 15vh;" *ngIf="language=='de'">Stoppuhr</h1>
+        <h1 style="text-align: center; margin-top: 15vh;" *ngIf="language=='en'">Timer</h1>
         <p style="font-size: 80px; text-align: center;">{{ formatTime() }}</p>
         <div class="buttons" style="text-align: center;">
-          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 5px; height: 35px; border-radius: 10px;">Start</button>
-          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-left: 5px; margin-right: 5px; height: 35px; border-radius: 10px;">Stop</button>
-          <button (click)="resetTimer()" style="width: 25vw; height: 35px; border-radius: 10px; margin-left: 5px;">Zurücksetzen</button>
+          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 5px; height: 35px; border-radius: 10px;" *ngIf="language=='de'">Start</button>
+          <button (click)="startTimer()" [disabled]="isRunning" style="width: 25vw; margin-right: 5px; height: 35px; border-radius: 10px;" *ngIf="language=='en'">Start</button>
+          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-left: 5px; margin-right: 5px; height: 35px; border-radius: 10px;" *ngIf="language=='de'">Stop</button>
+          <button (click)="stopTimer()" [disabled]="!isRunning" style="width: 25vw; margin-left: 5px; margin-right: 5px; height: 35px; border-radius: 10px;" *ngIf="language=='en'">Stop</button>
+          <button (click)="resetTimer()" style="width: 25vw; height: 35px; border-radius: 10px; margin-left: 5px;" *ngIf="language=='de'">Zurücksetzen</button>
+          <button (click)="resetTimer()" style="width: 25vw; height: 35px; border-radius: 10px; margin-left: 5px;" *ngIf="language=='en'">Reset</button>
         </div>
       </div>
     

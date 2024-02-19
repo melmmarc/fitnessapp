@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class BmiComponent {
 
-  language:string = 'en';
+  language:string = 'de';
 
   height:number = 180;
   weight:number = 80;
@@ -64,31 +64,62 @@ export class BmiComponent {
   calculateDailyCalorieIntake() {
     // Implement your chosen formula to calculate daily calorie intake
     // For example, using the Mifflin-St Jeor Equation
-    if (this.age && this.gender && this.weight && this.height && this.activityLevel) {
-      let bmr: number;
-      if (this.gender === 'male') {
-        bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
-      } else {
-        bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
+    if(this.language=='de')
+    {
+      if (this.age && this.gender && this.weight && this.height && this.activityLevel) {
+        let bmr: number;
+        if (this.gender === 'male') {
+          bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
+        } else {
+          bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
+        }
+        // Adjust BMR based on activity level
+        let activityMultiplier: number;
+        switch (this.activityLevel) {
+          case 'low':
+            activityMultiplier = 1.2;
+            break;
+          case 'normal':
+            activityMultiplier = 1.55;
+            break;
+          case 'high':
+            activityMultiplier = 1.9;
+            break;
+          default:
+            activityMultiplier = 1.55; // Default to 'normal'
+            break;
+        }
+        this.dailyCalorieIntake = bmr * activityMultiplier;
       }
-      // Adjust BMR based on activity level
-      let activityMultiplier: number;
-      switch (this.activityLevel) {
-        case 'low':
-          activityMultiplier = 1.2;
-          break;
-        case 'normal':
-          activityMultiplier = 1.55;
-          break;
-        case 'high':
-          activityMultiplier = 1.9;
-          break;
-        default:
-          activityMultiplier = 1.55; // Default to 'normal'
-          break;
-      }
-      this.dailyCalorieIntake = bmr * activityMultiplier;
     }
+    else{
+      if (this.age && this.gender && this.weight && this.height && this.activityLevel) {
+        let bmr: number;
+        if (this.gender === 'male') {
+          bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
+        } else {
+          bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
+        }
+        // Adjust BMR based on activity level
+        let activityMultiplier: number;
+        switch (this.activityLevel) {
+          case 'low':
+            activityMultiplier = 1.2;
+            break;
+          case 'normal':
+            activityMultiplier = 1.55;
+            break;
+          case 'high':
+            activityMultiplier = 1.9;
+            break;
+          default:
+            activityMultiplier = 1.55; // Default to 'normal'
+            break;
+        }
+        this.dailyCalorieIntake = bmr * activityMultiplier;
+      }
+    }
+    
   }
 
 }
