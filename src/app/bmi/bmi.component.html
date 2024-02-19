@@ -19,8 +19,7 @@
         <button (click)="calculateBMI()" style="height: 35px; width: 49vw; border-radius: 10px;">BMI berechnen</button>
         </div>
         <div *ngIf="bmi" style="text-align: center; margin-top: 1vh; font-size: 14px;">
-          <h3>Dein BMI: {{ bmi | number:'1.1-1' }}</h3>
-          <p>{{ getBMICategory(bmi) }}</p>
+          <h3>Dein BMI: {{ bmi | number:'1.1-1' }} ({{ getBMICategory(bmi) }})</h3>
         </div>
 
         <!-- Daily calorie intake calculator input fields -->
@@ -71,6 +70,7 @@
   <div *ngIf="dailyCalorieIntake" style="text-align: center; margin-top: 1vh; font-size: 14px;">
     <h3>Täglicher Kalorienverbrauch: {{ dailyCalorieIntake }} </h3>
   </div>
+  
 
       </div>
     
