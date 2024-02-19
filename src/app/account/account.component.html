@@ -48,9 +48,13 @@
           />
         </div>
 
-        <div style="text-align: center; margin-bottom: 1vh;">
+        <div style="text-align: center; margin-bottom: 1vh;" *ngIf="language=='de'">
           BENUTZERNAME
         </div>
+        <div style="text-align: center; margin-bottom: 1vh;" *ngIf="language=='en'">
+          USERNAME
+        </div>
+
         <div style="text-align: center;">
           E-Mail: inf0000@hs-worms.de
         </div>
