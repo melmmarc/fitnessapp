@@ -72,21 +72,41 @@
           <button (click)="goToChangebackground()" style="width: 50vw; height: 35px; border-radius: 10px;" *ngIf="language == 'de'">Hintergrund ändern</button>
           <button (click)="goToChangebackground()" style="width: 50vw; height: 35px; border-radius: 10px;" *ngIf="language == 'en'">Change Background</button>
 
-          <img
-            class="german"
-            src="../../assets/images/german.png"
-            width="50vw"
-            style="border-radius: 3%; margin-right: 20px; margin-top: 50px;"
-            (click)="switchToGerman()"
-          />
-
-          <img
-            class="english"
-            src="../../assets/images/usa.png"
-            width="55vw"
-            style="border-radius: 3%; margin-left: 20px; margin-top: 50px;"
-            (click)="switchToEnglish()"
-          />
+          <div class="flags">
+            <img
+                      class="german"
+                      *ngIf="language=='de'"
+                      src="../../assets/images/german-selected.png"
+                      width="80vw"
+                      style="border-radius: 0%; margin-right: 20px"
+                      (click)="switchToGerman()"
+                    />
+                    <img
+                    *ngIf="language=='en'"
+                      class="german"
+                      src="../../assets/images/german-deselected.png"
+                      width="60vw"
+                      style="border-radius: 0%; margin-right: 20px"
+                      (click)="switchToGerman()"
+                    />
+          
+                    <img
+                      *ngIf="language=='en'"
+                      class="english"
+                      src="../../assets/images/usa-selected.png"
+                      width="80vw"
+                      style="border-radius: 0%; margin-left: 20px"
+                      (click)="switchToEnglish()"
+                    />
+                    <img
+                    *ngIf="language=='de'"
+                      class="english"
+                      src="../../assets/images/usa-deselected.png"
+                      width="60vw"
+                      style="border-radius: 0%; margin-left: 20px"
+                      (click)="switchToEnglish()"
+                    />
+                </div>
 
       </div>
 
