@@ -52,7 +52,4 @@ td {
   border-right: 1px solid #ddd; /* Add right border to the table */
 }
 
-/* Remove right border from last cell in each row */
-tr td:last-child {
-  border-right: none;
-}
+
