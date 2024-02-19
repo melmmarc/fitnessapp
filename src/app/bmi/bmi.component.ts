@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class BmiComponent {
 
-  language:string = 'de';
+  language:string = 'en';
 
   height:number = 180;
   weight:number = 80;

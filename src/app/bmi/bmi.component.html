@@ -3,72 +3,93 @@
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
 
       <div class="bmi-calculator">
-        <h2 style="text-align: center; margin-top: 2vh;">BMI Rechner</h2>
+        <h2 style="text-align: center; margin-top: 2vh;" *ngIf="language=='de'">BMI Rechner</h2>
+        <h2 style="text-align: center; margin-top: 2vh;" *ngIf="language=='en'">BMI Calculator</h2>
         <div style="margin-top: 5vh;">
-          <label for="height" style="font-size: 18px;">Größe (cm):</label>
+          <label for="height" style="font-size: 18px;" *ngIf="language=='de'">Größe (cm):</label>
+          <label for="height" style="font-size: 18px;" *ngIf="language=='en'">Height (cm):</label>
           <input type="number" id="height" [(ngModel)]="height" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;" required>
         </div>
         <div>
           <p style="opacity: 0; margin-top: 0; margin-bottom: 0;">spaceholder</p>
         </div>
         <div style="margin-top: 1vh;">
-          <label for="weight" style="font-size: 18px;">Gewicht (kg):</label>
+          <label for="weight" style="font-size: 18px;" *ngIf="language=='de'">Gewicht (kg):</label>
+          <label for="weight" style="font-size: 18px;" *ngIf="language=='en'">Weight (kg):</label>
           <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px" required>
         </div>
         <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button (click)="calculateBMI()" style="height: 35px; width: 49vw; border-radius: 10px;">BMI berechnen</button>
+        <button (click)="calculateBMI()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">BMI berechnen</button>
+        <button (click)="calculateBMI()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Calculate BMI</button>
         </div>
         <div *ngIf="bmi" style="text-align: center; margin-top: 1vh; font-size: 14px;">
-          <h3 style="margin-bottom: 0">Dein BMI: {{ bmi | number:'1.1-1' }} ({{ getBMICategory(bmi) }})</h3>
+          <h3 style="margin-bottom: 0" *ngIf="language=='de'">Dein BMI: {{ bmi | number:'1.1-1' }} ({{ getBMICategory(bmi) }})</h3>
+          <h3 style="margin-bottom: 0" *ngIf="language=='en'">Your BMI: {{ bmi | number:'1.1-1' }} ({{ getBMICategory(bmi) }})</h3>
         </div>
 
         <!-- Daily calorie intake calculator input fields -->
   <div style="margin-top: 6vh; margin-bottom: 25px;">
-    <h2 style="text-align: center; margin-top: 2vh; margin-bottom: 5vh;">Kalorienbedarf Rechner</h2>
-    <label for="age" style="font-size: 18px;">Alter:</label>
+    <h2 style="text-align: center; margin-top: 2vh; margin-bottom: 5vh;" *ngIf="language=='de'">Kalorienbedarf Rechner</h2>
+    <h2 style="text-align: center; margin-top: 2vh; margin-bottom: 5vh;" *ngIf="language=='en'">Calorie Calculator</h2>
+    <label for="age" style="font-size: 18px;" *ngIf="language=='de'">Alter:</label>
+    <label for="age" style="font-size: 18px;" *ngIf="language=='en'">Age:</label>
     <input type="number" id="age" [(ngModel)]="age" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;">
   </div>
   <div>
-    <label for="height" style="font-size: 18px;">Größe (cm):</label>
+    <label for="height" style="font-size: 18px;" *ngIf="language=='de'">Größe (cm):</label>
+    <label for="height" style="font-size: 18px;" *ngIf="language=='en'">Height (cm):</label>
     <input type="number" id="height" [(ngModel)]="height" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;" required>
   </div>
   <div>
     <p style="opacity: 0; margin-top: 0; margin-bottom: 0;">spaceholder</p>
   </div>
   <div style="margin-top: 1vh;">
-    <label for="weight" style="font-size: 18px;">Gewicht (kg):</label>
+    <label for="weight" style="font-size: 18px;" *ngIf="language=='de'">Gewicht (kg):</label>
+    <label for="weight" style="font-size: 18px;" *ngIf="language=='en'">Weight (kg):</label>
     <input type="number" id="weight" [(ngModel)]="weight" style="height: 30px; width: 50vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px" required>
   </div>
   <div>
     <p style="opacity: 0; margin-top: 0; margin-bottom: 0;">spaceholder</p>
   </div>
   <div style="margin-top: 10px;">
-    <label for="gender" style="font-size: 18px;">Geschlecht:</label>
+    <label for="gender" style="font-size: 18px;" *ngIf="language=='de'">Geschlecht:</label>
+    <label for="gender" style="font-size: 18px;" *ngIf="language=='en'">Gender:</label>
     <select id="gender" [(ngModel)]="gender" style="height: 35px; width: 52vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;">
-      <option value="male">Männlich</option>
-      <option value="female">Weiblich</option>
+      <option value="male" *ngIf="language=='de'">Männlich</option>
+      <option value="male" *ngIf="language=='en'">Male</option>
+      <option value="female" *ngIf="language=='de'">Weiblich</option>
+      <option value="female" *ngIf="language=='en'">Female</option>
     </select>
   </div>
   <div>
     <p style="opacity: 0; margin-top: 0; margin-bottom: 0;">spaceholder</p>
   </div>
   <div style="margin-top: 10px;">
-    <label for="activityLevel" style="font-size: 18px;">Aktivitätslevel:</label>
+    <label for="activityLevel" style="font-size: 18px;" *ngIf="language=='de'">Aktivitätslevel:</label>
+    <label for="activityLevel" style="font-size: 18px;" *ngIf="language=='en'">Activitylevel:</label>
     <select id="activityLevel" [(ngModel)]="activityLevel" style="height: 35px; width: 52vw; border-radius: 10px; text-align: center; position: relative; float: right; margin-top: -7px;">
-      <option value="low">Niedrig</option>
-      <option value="normal">Normal</option>
-      <option value="high">Hoch</option>
+      <option value="low" *ngIf="language=='de'">Niedrig</option>
+      <option value="low" *ngIf="language=='en'">Low</option>
+      <option value="normal" *ngIf="language=='de'">Normal</option>
+      <option value="normal" *ngIf="language=='en'">Normal</option>
+      <option value="high" *ngIf="language=='de'">Hoch</option>
+      <option value="high" *ngIf="language=='en'">High</option>
     </select>
   </div>
   
   <!-- Button to calculate daily calorie intake -->
   <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-    <button (click)="calculateDailyCalorieIntake()" style="height: 35px; width: 49vw; border-radius: 10px;">Kalorienverbrauch berechnen</button>
+    <button (click)="calculateDailyCalorieIntake()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Kalorienverbrauch berechnen</button>
+    <button (click)="calculateDailyCalorieIntake()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Calculate Calorie Use</button>
   </div>
   
   <!-- Display daily calorie intake -->
-  <div *ngIf="dailyCalorieIntake" style="text-align: center; margin-top: 1vh; font-size: 14px;">
+  <div *ngIf="dailyCalorieIntake && language == 'de' " style="text-align: center; margin-top: 1vh; font-size: 14px;">
     <h3>Täglicher Kalorienverbrauch: {{ dailyCalorieIntake }} </h3>
+  </div>
+
+  <div *ngIf="dailyCalorieIntake && language == 'en'" style="text-align: center; margin-top: 1vh; font-size: 14px;">
+    <h3>Daily Calorie Use: {{ dailyCalorieIntake }} </h3>
   </div>
   
 
