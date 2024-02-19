@@ -43,6 +43,10 @@ export class ChangeavatarComponent {
     this.router.navigateByUrl('/account');
   }
 
+  updateAvatar(){
+    // code
+  }
+
   toggleFemale2():void{
     if(this.female2Selected == false)
     {
