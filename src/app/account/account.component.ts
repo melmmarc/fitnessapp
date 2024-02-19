@@ -33,4 +33,16 @@ export class AccountComponent {
     this.router.navigateByUrl('/timer');
   }
 
+  goToChangeavatar(){
+    this.router.navigateByUrl('/changeavatar');
+  }
+
+  goToChangeusername(){
+    this.router.navigateByUrl('/changeusername');
+  }
+
+  goToChangepassword(){
+    this.router.navigateByUrl('/changepassword');
+  }
+
 }
