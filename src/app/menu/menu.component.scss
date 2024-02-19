@@ -35,5 +35,24 @@
     background-color: rgb(1, 39, 62);
   }
  
-  
+  /* Add border to the entire table */
+table {
+  border-collapse: collapse; /* Collapse borders to avoid double borders */
+  border-left: 1px solid #ddd; /* Add left border to the table */
+  border-right: 1px solid #ddd; /* Add right border to the table */
+}
 
+/* Add border to table rows and cells */
+tr {
+  border-bottom: 1px solid #ddd; /* Add bottom border to each row */
+}
+
+td {
+  border-right: 1px solid #ddd; /* Add right border to each cell */
+  padding: 8px; /* Add some padding for better appearance */
+}
+
+/* Remove right border from last cell in each row */
+tr td:last-child {
+  border-right: none;
+}
