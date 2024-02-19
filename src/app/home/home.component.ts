@@ -10,6 +10,7 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
+  language:string = 'de';
   selectedUsername: string = ''; 
   selectedEmail: string = ''; 
   selectedPassword: string = ''; 
@@ -23,6 +24,18 @@ export class HomeComponent {
   male1Selected:boolean = false;
   male4Selected:boolean = false;
   male5Selected:boolean = false;
+
+  // Function to change language to German ('de')
+  switchToGerman() {
+    this.language = 'de';
+    // You can add additional logic here if needed
+  }
+
+  // Function to change language to English ('en')
+  switchToEnglish() {
+    this.language = 'en';
+    // You can add additional logic here if needed
+  }
 
   updateUsername(username: string) {
     this.selectedUsername = username;

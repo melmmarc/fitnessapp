@@ -123,6 +123,24 @@
     </select>
   </div>
 
+  <div class="flags">
+  <img
+            class="german"
+            src="../../assets/images/german.png"
+            width="50vw"
+            style="border-radius: 3%; margin-right: 20px; margin-top: 50px;"
+            (click)="switchToGerman()"
+          />
+
+          <img
+            class="english"
+            src="../../assets/images/usa.png"
+            width="55vw"
+            style="border-radius: 3%; margin-left: 20px; margin-top: 50px;"
+            (click)="switchToEnglish()"
+          />
+      </div>
+
   <button (click)="goToMenu()" 
             style="height: 35px; width: 100%; border-radius: 10px; margin-top: 10vh;">Weiter</button>
 </div>

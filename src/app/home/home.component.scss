@@ -13,4 +13,20 @@
     color: white; // Change text color to maintain visibility
   }
   
+  .flags {
+    display: flex;
+    justify-content: center; /* Horizontally center the flags */
+    align-items: center; /* Vertically center the flags */
+    margin-top: 2px;
+  }
+  
+  .german,
+  .english {
+    border-radius: 3%;
+    margin-right: 20px;
+  }
+  
+  .english {
+    margin-left: 20px;
+  }
 
