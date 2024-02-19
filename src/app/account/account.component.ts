@@ -8,6 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AccountComponent {
 
+  male1selected:boolean = false;
+  male4selected:boolean = true;
+  male5selected:boolean = false;
+  female2selected:boolean = false;
+  female3selected:boolean = false;
+  female5selected:boolean = false;
+
   constructor(private router: Router) {}
 
   goToMenu(){
