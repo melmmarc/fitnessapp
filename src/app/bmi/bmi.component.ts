@@ -14,7 +14,7 @@ export class BmiComponent {
 
   age: number = 30;
   gender: string = 'male';
-  activityLevel: number = 1.55; // Default activity level
+  activityLevel: string = 'normal'; // Default activity level
   dailyCalorieIntake: number = 0;
 
   constructor(private router: Router) {}
@@ -69,7 +69,23 @@ export class BmiComponent {
       } else {
         bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
       }
-      this.dailyCalorieIntake = bmr * this.activityLevel;
+      // Adjust BMR based on activity level
+      let activityMultiplier: number;
+      switch (this.activityLevel) {
+        case 'low':
+          activityMultiplier = 1.2;
+          break;
+        case 'normal':
+          activityMultiplier = 1.55;
+          break;
+        case 'high':
+          activityMultiplier = 1.9;
+          break;
+        default:
+          activityMultiplier = 1.55; // Default to 'normal'
+          break;
+      }
+      this.dailyCalorieIntake = bmr * activityMultiplier;
     }
   }
 
