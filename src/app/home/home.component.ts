@@ -49,14 +49,16 @@ export class HomeComponent {
     console.log('Selected username: ', this.selectedUsername);
   }
 
-  addData(f: any){
+  addData(f: any) {
     const userData = f.value; // Extract form data
+    userData.goal = this.selectedGoal; // Add selected goal to userData
+    userData.frequency = this.selectedFrequency; // Add selected frequency to userData
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
-        console.log('Data saved successfully');
-        this.router.navigateByUrl('/menu'); // Navigate to /menu route after data is saved
+      console.log('Data saved successfully');
+      this.router.navigateByUrl('/menu'); // Navigate to /menu route after data is saved
     }).catch((err) => {
-        console.log(err);
+      console.log(err);
     });
   }
 
