@@ -11,6 +11,8 @@ import { ChangeavatarComponent } from './changeavatar/changeavatar.component';
 import { ChangeusernameComponent } from './changeusername/changeusername.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ChangebackgroundComponent } from './changebackground/changebackground.component';
+import { StartComponent } from './start/start.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { 
@@ -48,6 +50,12 @@ const routes: Routes = [
   },
   { 
     path: 'changebackground', component: ChangebackgroundComponent 
+  },
+  { 
+    path: 'start', component: StartComponent 
+  },
+  { 
+    path: 'login', component: LoginComponent 
   },
 ];
 
