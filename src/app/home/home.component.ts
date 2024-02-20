@@ -53,7 +53,8 @@ export class HomeComponent {
     const userData = f.value; // Extract form data
     userData.goal = this.selectedGoal; // Add selected goal to userData
     userData.frequency = this.selectedFrequency; // Add selected frequency to userData
-    console.log('Data to be stored:', userData); // Log userData to check if goal and frequency are included
+    userData.selectedAvatar = this.getSelectedAvatar(); // Add selected avatar to userData
+    console.log('Data to be stored:', userData); // Log userData to check if avatar is included
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
@@ -61,6 +62,24 @@ export class HomeComponent {
     }).catch((err) => {
       console.log(err);
     });
+  }
+
+  getSelectedAvatar(): string {
+    if (this.male1Selected) {
+      return 'male1';
+    } else if (this.male4Selected) {
+      return 'male4';
+    } else if (this.male5Selected) {
+      return 'male5';
+    } else if (this.female2Selected) {
+      return 'female2';
+    } else if (this.female3Selected) {
+      return 'female3';
+    } else if (this.female5Selected) {
+      return 'female5';
+    } else {
+      return ''; // Return empty string if no avatar is selected
+    }
   }
 
   selectGoal(event: any) {
