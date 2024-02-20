@@ -23,4 +23,8 @@ export class LoginComponent {
     this.router.navigateByUrl('/home');
   }
 
+  goToMenu(){
+    this.router.navigateByUrl('/menu');
+  }
+
 }
