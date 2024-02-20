@@ -18,6 +18,8 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ChangebackgroundComponent } from './changebackground/changebackground.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { StartComponent } from './start/start.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
