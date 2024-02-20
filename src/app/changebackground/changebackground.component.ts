@@ -69,7 +69,7 @@ export class ChangebackgroundComponent {
   }
 
   toggleOrange():void{
-    if(this.blackBGselected == false)
+    if(this.orangeBGselected == false)
     {
       this.blueBGselected = false;
       this.blackBGselected = false;
@@ -81,7 +81,7 @@ export class ChangebackgroundComponent {
   }
 
   toggleSchalke():void{
-    if(this.blackBGselected == false)
+    if(this.schalkeBGselected == false)
     {
       this.blueBGselected = false;
       this.blackBGselected = false;
@@ -93,7 +93,7 @@ export class ChangebackgroundComponent {
   }
 
   toggleDortmund():void{
-    if(this.blackBGselected == false)
+    if(this.dortmundBGselected == false)
     {
       this.blueBGselected = false;
       this.blackBGselected = false;
@@ -105,7 +105,7 @@ export class ChangebackgroundComponent {
   }
 
   toggleBayern():void{
-    if(this.blackBGselected == false)
+    if(this.bayernBGselected == false)
     {
       this.blueBGselected = false;
       this.blackBGselected = false;
