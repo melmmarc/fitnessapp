@@ -15,6 +15,12 @@ export class HeaderComponent {
     this.showSettingsIcon = this.router.url !== '/home';
   }
 
+  handleLogoClick() {
+    if (this.router.url !== '/home') {
+      this.router.navigateByUrl('/menu');
+    }
+  }
+
   goToSettings(){
     this.router.navigateByUrl('/settings');
   }
