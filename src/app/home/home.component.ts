@@ -54,7 +54,8 @@ export class HomeComponent {
     userData.goal = this.selectedGoal; // Add selected goal to userData
     userData.frequency = this.selectedFrequency; // Add selected frequency to userData
     userData.selectedAvatar = this.getSelectedAvatar(); // Add selected avatar to userData
-    console.log('Data to be stored:', userData); // Log userData to check if avatar is included
+    userData.language = this.language; // Add selected language to userData
+    console.log('Data to be stored:', userData); // Log userData to check if language is included
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
