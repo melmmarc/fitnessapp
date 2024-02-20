@@ -50,13 +50,14 @@ export class HomeComponent {
   }
 
   addData(f: any){
+    const userData = f.value; // Extract form data
     const collectionInstance = collection(this.firestore, 'users');
-    addDoc(collectionInstance, f.value).then(() => {
+    addDoc(collectionInstance, userData).then(() => {
         console.log('Data saved successfully');
-
+        this.router.navigateByUrl('/menu'); // Navigate to /menu route after data is saved
     }).catch((err) => {
-        console.log(err)
-    })
+        console.log(err);
+    });
   }
 
   selectGoal(goal: string) {
