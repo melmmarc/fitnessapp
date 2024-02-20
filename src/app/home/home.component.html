@@ -93,13 +93,22 @@
       style="border-radius: 50%; margin-left: 8px;"
     />
     <form #f="ngForm" (ngSubmit)="addData(f)">
-        <input type="text" name="name" ngModel>
-        <br>
-        <input> type="email" name="email ngModel"
-        <br>
-        <input> type="passwort" name="password ngModel"
-        <br>
-        <button type="submit">Save Data </button>
+      <div class="username" style="margin-top: 5vh;">
+        <label style="margin-top: 20px; font-size: 20px;" for="username" *ngIf="language=='de'">Benutzername:</label>
+        <label style="margin-top: 20px; font-size: 20px;" for="username" *ngIf="language=='en'">Username:</label>
+        <input style="margin-top: 20px; height: 26px; border-radius: 10px; position: relative; float: right; margin-top: -5px; width: 45%" type="text" name="name" ngModel>
+      </div>
+      <div class="email" style="margin-top: 5vh;">
+        <label style="margin-top: 20px; font-size: 20px;" for="email" *ngIf="language=='de'">E-Mail:</label>
+        <label style="margin-top: 20px; font-size: 20px;" for="email" *ngIf="language=='en'">E-Mail:</label>
+        <input style="margin-top: 20px; height: 26px; border-radius: 10px; position: relative; float: right; margin-top: -5px; width: 45%" type="email" name="email ngModel">
+      </div>
+      <div class="password" style="margin-top: 5vh;">
+        <label style="margin-top: 20px; font-size: 20px;" for="password" *ngIf="language=='de'">Passwort:</label>
+        <label style="margin-top: 20px; font-size: 20px;" for="password" *ngIf="language=='en'">Password:</label>
+        <input style="margin-top: 20px; height: 26px; border-radius: 10px; position: relative; float: right; margin-top: -5px; width: 45%" type="passwort" name="password ngModel">
+      </div>
+        <button style="margin-top: 5vh;" type="submit">Save Data </button>
     </form>
   </div>
 
