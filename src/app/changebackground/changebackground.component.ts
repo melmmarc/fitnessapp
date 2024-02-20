@@ -44,5 +44,75 @@ export class ChangebackgroundComponent {
     this.router.navigateByUrl('/account');
   }
 
+  toggleBlue():void{
+    if(this.blueBGselected == false)
+    {
+      this.blueBGselected = true;
+      this.blackBGselected = false;
+      this.orangeBGselected = false;
+      this.schalkeBGselected = false;
+      this.dortmundBGselected = false;
+      this.bayernBGselected = false;
+    }
+  }
 
+  toggleBlack():void{
+    if(this.blackBGselected == false)
+    {
+      this.blueBGselected = false;
+      this.blackBGselected = true;
+      this.orangeBGselected = false;
+      this.schalkeBGselected = false;
+      this.dortmundBGselected = false;
+      this.bayernBGselected = false;
+    }
+  }
+
+  toggleOrange():void{
+    if(this.blackBGselected == false)
+    {
+      this.blueBGselected = false;
+      this.blackBGselected = false;
+      this.orangeBGselected = true;
+      this.schalkeBGselected = false;
+      this.dortmundBGselected = false;
+      this.bayernBGselected = false;
+    }
+  }
+
+  toggleSchalke():void{
+    if(this.blackBGselected == false)
+    {
+      this.blueBGselected = false;
+      this.blackBGselected = false;
+      this.orangeBGselected = false;
+      this.schalkeBGselected = true;
+      this.dortmundBGselected = false;
+      this.bayernBGselected = false;
+    }
+  }
+
+  toggleDortmund():void{
+    if(this.blackBGselected == false)
+    {
+      this.blueBGselected = false;
+      this.blackBGselected = false;
+      this.orangeBGselected = false;
+      this.schalkeBGselected = false;
+      this.dortmundBGselected = true;
+      this.bayernBGselected = false;
+    }
+  }
+
+  toggleBayern():void{
+    if(this.blackBGselected == false)
+    {
+      this.blueBGselected = false;
+      this.blackBGselected = false;
+      this.orangeBGselected = false;
+      this.schalkeBGselected = false;
+      this.dortmundBGselected = false;
+      this.bayernBGselected = true;
+    }
+  }
 }
