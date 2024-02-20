@@ -16,6 +16,8 @@ import { ChangeavatarComponent } from './changeavatar/changeavatar.component';
 import { ChangeusernameComponent } from './changeusername/changeusername.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ChangebackgroundComponent } from './changebackground/changebackground.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ChangebackgroundComponent } from './changebackground/changebackground.c
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"fitapp-d26bf","appId":"1:544070609954:web:d72c25f5921b8cd8cdae7b","storageBucket":"fitapp-d26bf.appspot.com","apiKey":"AIzaSyAOPD_y22L4nge_QW_lgTwIfdpixFc4f90","authDomain":"fitapp-d26bf.firebaseapp.com","messagingSenderId":"544070609954","measurementId":"G-PXZQ9MZH50"})),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

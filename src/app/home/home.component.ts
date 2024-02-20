@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -41,6 +42,16 @@ export class HomeComponent {
     this.selectedUsername = username;
     console.log('Selected username: ', this.selectedUsername);
   }
+
+//   addData(f: any){
+//     const collectionInstance = collection(this.firestore, 'users');
+//     addDoc(collectionInstance, f.value).then(() => {
+//         console.log('Data saved successfully');
+
+//     }).catch((err) => {
+//         console.log(err)
+//     })
+//   }
 
   selectGoal(goal: string) {
     this.selectedGoal = goal;

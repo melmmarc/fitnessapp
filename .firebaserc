@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fitapp-d26bf": {
+      "hosting": {
+        "fitnessapp": [
+          "fitapp-d26bf"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fitapp-d26bf"
+  }
+}

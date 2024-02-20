@@ -97,8 +97,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "fitnessapp:build:production",
+              "serveTarget": "fitnessapp:serve:production"
+            },
+            "development": {
+              "buildTarget": "fitnessapp:build:development",
+              "serveTarget": "fitnessapp:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "decfa531-fe88-4f71-9d80-ef523bebc080"
   }
 }
