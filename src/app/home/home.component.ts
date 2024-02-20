@@ -71,6 +71,14 @@ export class HomeComponent {
     }
   }
 
+  selectFrequency(event: any) {
+    const value = event.target.value;
+    if (value) {
+      this.selectedFrequency = value;
+      console.log('Selected frequency: ', this.selectedFrequency);
+    }
+  }
+
   goToMenu() {
     this.router.navigateByUrl('/menu');
   }
