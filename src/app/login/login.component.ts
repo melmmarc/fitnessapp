@@ -10,6 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  language:string = 'de';
+  selectedUsername: string = ''; 
+  selectedEmail: string = ''; 
+  selectedPassword: string = ''; 
+  selectedGoal: string = ''; 
+  selectedFrequency: string = ''; 
+
   constructor(private router: Router) {}
 
 }
