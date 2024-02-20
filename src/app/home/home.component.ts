@@ -53,6 +53,7 @@ export class HomeComponent {
     const userData = f.value; // Extract form data
     userData.goal = this.selectedGoal; // Add selected goal to userData
     userData.frequency = this.selectedFrequency; // Add selected frequency to userData
+    console.log('Data to be stored:', userData); // Log userData to check if goal and frequency are included
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
@@ -62,9 +63,12 @@ export class HomeComponent {
     });
   }
 
-  selectGoal(goal: string) {
-    this.selectedGoal = goal;
-    console.log('Selected goal: ', this.selectedGoal);
+  selectGoal(event: any) {
+    const value = event.target.value;
+    if (value) {
+      this.selectedGoal = value;
+      console.log('Selected goal: ', this.selectedGoal);
+    }
   }
 
   goToMenu() {
