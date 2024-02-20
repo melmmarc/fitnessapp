@@ -18,4 +18,8 @@ export class HeaderComponent {
     this.router.navigateByUrl('/settings');
   }
 
+  goToMenu(){
+    this.router.navigateByUrl('/menu');
+  }
+
 }
