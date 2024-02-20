@@ -103,6 +103,10 @@ export class HomeComponent {
     this.router.navigateByUrl('/menu');
   }
 
+  goToLogin() {
+    this.router.navigateByUrl('/login');
+  }
+
   toggleFemale2():void{
     if(this.female2Selected == false)
     {
