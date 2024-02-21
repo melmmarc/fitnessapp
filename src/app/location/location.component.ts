@@ -9,9 +9,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LocationComponent{
 
   language:string = 'de';
-  username:string = '';
+  username: string = ''; 
+  selectedEmail: string = ''; 
+  selectedPassword: string = ''; 
+  selectedGoal: string = ''; 
+  selectedFrequency: string = ''; 
   selectedAvatar: string = '';
-  selectedGoal: string = '';
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -23,6 +26,9 @@ export class LocationComponent{
       this.selectedAvatar = params['selectedAvatar'];
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
+      this.selectedEmail = params['email']; // Add email
+      this.selectedPassword = params['password']; // Add password
+      this.selectedFrequency = params['frequency']; // Add frequency
       console.log('Username received in MenuComponent:', this.username);
       console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
       console.log('Selected Language received in MenuComponent:', this.language); // Log the selected language
@@ -37,6 +43,9 @@ export class LocationComponent{
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
+        selectedEmail: this.selectedEmail,
+        selectedPassword: this.selectedPassword,
+        selectedFrequency: this.selectedFrequency,
       }
     });
   }
@@ -48,6 +57,9 @@ export class LocationComponent{
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
+        selectedEmail: this.selectedEmail,
+        selectedPassword: this.selectedPassword,
+        selectedFrequency: this.selectedFrequency,
       }
     });
   }
@@ -59,6 +71,9 @@ export class LocationComponent{
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
+        selectedEmail: this.selectedEmail,
+        selectedPassword: this.selectedPassword,
+        selectedFrequency: this.selectedFrequency,
       }
     });
   }
@@ -70,6 +85,9 @@ export class LocationComponent{
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
+        selectedEmail: this.selectedEmail,
+        selectedPassword: this.selectedPassword,
+        selectedFrequency: this.selectedFrequency,
       }
     });
   }
@@ -81,6 +99,9 @@ export class LocationComponent{
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
+        selectedEmail: this.selectedEmail,
+        selectedPassword: this.selectedPassword,
+        selectedFrequency: this.selectedFrequency,
       }
     });
   }

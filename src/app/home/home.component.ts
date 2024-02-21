@@ -23,6 +23,7 @@ export class HomeComponent {
   selectedPassword: string = ''; 
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
+  selectedAvatar: string = '';
 
   female2Selected:boolean = false;
   female3Selected:boolean = false;
@@ -65,6 +66,9 @@ export class HomeComponent {
         selectedAvatar: userData.selectedAvatar,
         language: userData.language,  // Pass the selected language
         selectedGoal: userData.goal,
+        email: userData.email,
+        password: userData.password,
+        frequency: userData.frequency,
       }});
     }).catch((err) => {
       console.log(err);
