@@ -10,12 +10,16 @@
     <div class="content" style="padding-left: 30px; padding-right: 30px; height: 94vh">
 
       <div class="center-container">
-          <button (click)="goToAccount()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Konto</button>
+          <button *ngIf="language=='de'" (click)="goToAccount()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Konto</button>
+          <button *ngIf="language=='en'" (click)="goToAccount()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Account</button>
         
-          <button (click)="logOut()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Abmelden</button>
+          <button *ngIf="language=='de'" (click)="logOut()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Abmelden</button>
+          <button *ngIf="language=='en'" (click)="logOut()" style="width: 50vw; height: 35px; border-radius: 10px; margin-bottom: 30px;">Logout</button>
+
         
         
-          <button (click)="deleteAccount()" style="width: 50vw; height: 35px; border-radius: 10px;">Konto löschen</button>
+          <button *ngIf="language=='de'" (click)="deleteAccount()" style="width: 50vw; height: 35px; border-radius: 10px;">Konto löschen</button>
+          <button *ngIf="language=='en'" (click)="deleteAccount()" style="width: 50vw; height: 35px; border-radius: 10px;">Delete Account</button>
         
       </div>
     
