@@ -15,7 +15,7 @@ export class AccountComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
-  selectedBG: string = 'blue';
+  selectedBG: string = '';
 
   blueBGselected:boolean = true;
   blackBGselected:boolean = false;
@@ -44,7 +44,16 @@ export class AccountComponent {
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
       this.selectedBG = params['selectedBG'];  
+      this.updateBackgroundSelection();
     });
+  }
+
+  updateBackgroundSelection() {
+    this.blackBGselected = this.selectedBG === 'black';
+    this.orangeBGselected = this.selectedBG === 'orange';
+    this.schalkeBGselected = this.selectedBG === 'schalke';
+    this.dortmundBGselected = this.selectedBG === 'dortmund';
+    this.bayernBGselected = this.selectedBG === 'bayern';
   }
 
   // Function to change language to German ('de')

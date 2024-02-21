@@ -17,6 +17,13 @@ export class ChangepasswordComponent {
   selectedAvatar: string = '';
   selectedBG: string = 'blue';
 
+  blueBGselected:boolean = true;
+  blackBGselected:boolean = false;
+  orangeBGselected:boolean = false;
+  schalkeBGselected:boolean = false;
+  dortmundBGselected:boolean = false;
+  bayernBGselected:boolean = false;
+
   newPassword: string = ''; 
   confirmPassword: string = ''; // Add confirmPassword property
 
@@ -32,7 +39,16 @@ export class ChangepasswordComponent {
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
       this.selectedBG = params['selectedBG'];  
+      this.updateBackgroundSelection();
     });
+  }
+
+  updateBackgroundSelection() {
+    this.blackBGselected = this.selectedBG === 'black';
+    this.orangeBGselected = this.selectedBG === 'orange';
+    this.schalkeBGselected = this.selectedBG === 'schalke';
+    this.dortmundBGselected = this.selectedBG === 'dortmund';
+    this.bayernBGselected = this.selectedBG === 'bayern';
   }
 
   goToMenu(){
