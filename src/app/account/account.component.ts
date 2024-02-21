@@ -17,6 +17,14 @@ export class AccountComponent {
   selectedAvatar: string = '';
   selectedBG: string = 'blue';
 
+  blueBGselected:boolean = true;
+  blackBGselected:boolean = false;
+  orangeBGselected:boolean = false;
+  schalkeBGselected:boolean = false;
+  dortmundBGselected:boolean = false;
+  bayernBGselected:boolean = false;
+
+
   male1selected:boolean = false;
   male4selected:boolean = true;
   male5selected:boolean = false;

@@ -141,8 +141,8 @@
       </div>
 
       <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Speichern</button>
-<button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Save</button>
+        <button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'" (click)="saveSelectedBG()">Speichern</button>
+<button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'" (click)="saveSelectedBG()">Save</button>
         </div>
     
       <div class="menu">

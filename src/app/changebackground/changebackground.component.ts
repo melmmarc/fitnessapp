@@ -40,6 +40,8 @@ export class ChangebackgroundComponent {
     });
   }
 
+  
+
   goToMenu(){
     this.router.navigate(['/menu'], {
       queryParams: {
@@ -201,4 +203,40 @@ export class ChangebackgroundComponent {
       this.bayernBGselected = true;
     }
   }
+
+  saveSelectedBG(): void {
+    // Logic to save the currently selected background into selectedBG
+    if (this.blueBGselected) {
+      this.selectedBG = 'blue';
+    } else if (this.blackBGselected) {
+      this.selectedBG = 'black';
+    } else if (this.orangeBGselected) {
+      this.selectedBG = 'orange';
+    } else if (this.schalkeBGselected) {
+      this.selectedBG = 'schalke';
+    } else if (this.dortmundBGselected) {
+      this.selectedBG = 'dortmund';
+    } else if (this.bayernBGselected) {
+      this.selectedBG = 'bayern';
+    }
+
+    // You can perform any additional logic here before saving if needed.
+
+    // Now, navigate to the desired page and pass the updated selectedBG value.
+    this.router.navigate(['/account'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
+      }
+    });
+  }
 }
+
+  
+
