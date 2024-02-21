@@ -15,6 +15,7 @@ export class ChangeusernameComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   newUsername: string = ''; // Variable to store the new username
 
@@ -29,6 +30,7 @@ export class ChangeusernameComponent {
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -42,6 +44,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -56,6 +59,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -70,6 +74,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -84,6 +89,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -98,6 +104,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -112,6 +119,7 @@ export class ChangeusernameComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }

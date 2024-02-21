@@ -16,6 +16,7 @@ export class HeaderComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   showSettingsIcon: boolean;
 
@@ -32,6 +33,7 @@ export class HeaderComponent {
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -46,6 +48,7 @@ export class HeaderComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
         }
       });
     }
@@ -61,6 +64,7 @@ export class HeaderComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -75,6 +79,7 @@ export class HeaderComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }

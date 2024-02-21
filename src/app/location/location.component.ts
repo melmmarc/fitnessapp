@@ -15,6 +15,7 @@ export class LocationComponent{
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -29,6 +30,7 @@ export class LocationComponent{
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -43,6 +45,7 @@ export class LocationComponent{
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -57,6 +60,7 @@ export class LocationComponent{
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -71,6 +75,7 @@ export class LocationComponent{
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -85,6 +90,7 @@ export class LocationComponent{
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -99,6 +105,7 @@ export class LocationComponent{
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }

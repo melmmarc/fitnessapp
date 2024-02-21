@@ -15,6 +15,7 @@ export class AccountComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   male1selected:boolean = false;
   male4selected:boolean = true;
@@ -34,6 +35,7 @@ export class AccountComponent {
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -59,6 +61,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -73,6 +76,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -87,6 +91,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -101,6 +106,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -115,6 +121,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -129,6 +136,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -143,6 +151,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -157,6 +166,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -171,6 +181,7 @@ export class AccountComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }

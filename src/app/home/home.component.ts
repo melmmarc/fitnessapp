@@ -24,6 +24,7 @@ export class HomeComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   female2Selected:boolean = false;
   female3Selected:boolean = false;
@@ -67,6 +68,7 @@ export class HomeComponent {
         email: userData.email,
         password: userData.password,
         frequency: userData.frequency,
+        selectedBG: 'blue',
       }});
     }).catch((err) => {
       console.log(err);

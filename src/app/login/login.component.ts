@@ -17,6 +17,7 @@ export class LoginComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -29,6 +30,7 @@ export class LoginComponent {
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -44,6 +46,7 @@ export class LoginComponent {
         selectedEmail: this.selectedEmail,
         selectedPassword: this.selectedPassword,
         selectedFrequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -58,6 +61,7 @@ export class LoginComponent {
         selectedEmail: this.selectedEmail,
         selectedPassword: this.selectedPassword,
         selectedFrequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }

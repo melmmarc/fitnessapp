@@ -15,6 +15,7 @@ export class MenuComponent {
   selectedGoal: string = ''; 
   selectedFrequency: string = ''; 
   selectedAvatar: string = '';
+  selectedBG: string = 'blue';
 
   gymday:boolean = true;
   cardioday:boolean = false;
@@ -31,7 +32,8 @@ export class MenuComponent {
       this.selectedGoal = params['selectedGoal']; 
       this.selectedEmail = params['email']; 
       this.selectedPassword = params['password']; 
-      this.selectedFrequency = params['frequency']; 
+      this.selectedFrequency = params['frequency'];
+      this.selectedBG = params['selectedBG'];  
     });
   }
 
@@ -45,6 +47,7 @@ export class MenuComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -59,6 +62,7 @@ export class MenuComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -73,6 +77,7 @@ export class MenuComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -87,6 +92,7 @@ export class MenuComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
@@ -101,6 +107,7 @@ export class MenuComponent {
         email: this.selectedEmail,
         password: this.selectedPassword,
         frequency: this.selectedFrequency,
+        selectedBG: this.selectedBG,
       }
     });
   }
