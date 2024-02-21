@@ -26,6 +26,13 @@ export class HomeComponent {
   selectedAvatar: string = '';
   selectedBG: string = 'blue';
 
+  blueBGselected:boolean = true;
+  blackBGselected:boolean = false;
+  orangeBGselected:boolean = false;
+  schalkeBGselected:boolean = false;
+  dortmundBGselected:boolean = false;
+  bayernBGselected:boolean = false;
+
   female2Selected:boolean = false;
   female3Selected:boolean = false;
   female5Selected:boolean = false;

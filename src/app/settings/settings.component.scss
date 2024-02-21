@@ -47,5 +47,36 @@
     margin-bottom: 10px; /* Add some space between buttons */
   }
 
+  .blue-bg {
+    background-image: url(/assets/images/app-bg-new.png);
+    background-size: 100% 100%;
+  }
 
+  .black-bg {
+    background-image: url(/assets/images/app-bg-black.png);
+    background-size: 100% 100%;
+  }
+
+  .orange-bg {
+    background-image: url(/assets/images/app-bg-orange.png);
+    background-size: 100% 100%;
+  }
+  
+  /* Apply Schalke background if schalkeBGselected is true */
+  .schalke-bg {
+    background-image: url(/assets/images/app-bg-schalke.png);
+    background-size: 100% 100%;
+  }
+  
+  /* Apply Dortmund background if dortmundBGselected is true */
+  .dortmund-bg {
+    background-image: url(/assets/images/app-bg-dortmund.png);
+    background-size: 100% 100%;
+  }
+  
+  /* Apply Bayern background if bayernBGselected is true */
+  .bayern-bg {
+    background-image: url(/assets/images/app-bg-bayern.png);
+    background-size: 100% 100%;
+  }
   

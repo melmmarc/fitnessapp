@@ -1,4 +1,10 @@
-<div class="wholePage">
+<div class="wholePage" 
+  [class.blue-bg]="blackBGselected"
+  [class.black-bg]="blackBGselected"
+  [class.orange-bg]="orangeBGselected"
+  [class.schalke-bg]="schalkeBGselected"
+  [class.dortmund-bg]="dortmundBGselected"
+  [class.bayern-bg]="bayernBGselected">
     <app-header></app-header>
 
     <div class="back" style="width: fit-content; margin-top: 5px;" (click)="goToMenu()">
