@@ -192,4 +192,20 @@ export class HomeComponent {
       this.male5Selected = true;
     }
   }
+
+  isFormValid(): boolean {
+    console.log('Username:', this.selectedUsername);
+    console.log('Email:', this.selectedEmail);
+    console.log('Password:', this.selectedPassword);
+    console.log('Goal:', this.selectedGoal);
+    console.log('Frequency:', this.selectedFrequency);
+  
+    return (
+      this.selectedUsername.trim() !== '' &&
+      this.selectedEmail.trim() !== '' &&
+      this.selectedPassword.trim() !== '' &&
+      this.selectedGoal !== '' &&
+      this.selectedFrequency !== ''
+    );
+  }
 }
