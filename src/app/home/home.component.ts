@@ -60,7 +60,7 @@ export class HomeComponent {
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
       // Pass the entered username to the menu component
-      this.router.navigate(['/menu'], { queryParams: { username: userData.username }});
+      this.router.navigate(['/menu'], { queryParams: { username: userData.username, selectedAvatar: userData.selectedAvatar }});
     }).catch((err) => {
       console.log(err);
     });

@@ -9,25 +9,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class MenuComponent {
 
   language:string = 'de';
-  username:string = 'username';
+  username:string = '';
+  selectedAvatar: string = '';
 
   gymday:boolean = true;
   cardioday:boolean = false;
   restday:boolean = false;
-
-  male1selected:boolean = false;
-  male4selected:boolean = true;
-  male5selected:boolean = false;
-  female2selected:boolean = false;
-  female3selected:boolean = false;
-  female5selected:boolean = false;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.username = params['username'];
+      this.selectedAvatar = params['selectedAvatar'];
       console.log('Username received in MenuComponent:', this.username);
+      console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
     });
   }
 
