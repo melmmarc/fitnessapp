@@ -34,7 +34,14 @@ export class HeaderComponent {
 
   handleLogoClick() {
     if (this.router.url !== '/home') {
-      this.router.navigateByUrl('/menu');
+      this.router.navigate(['/menu'], {
+        queryParams: {
+          username: this.username,
+          selectedAvatar: this.selectedAvatar,
+          language: this.language,
+          selectedGoal: this.selectedGoal,
+        }
+      });
     }
   }
 
@@ -50,7 +57,14 @@ export class HeaderComponent {
   }
 
   goToMenu(){
-    this.router.navigateByUrl('/menu');
+    this.router.navigate(['/menu'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
 }
