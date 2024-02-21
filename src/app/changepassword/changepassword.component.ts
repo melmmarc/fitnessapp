@@ -17,6 +17,7 @@ export class ChangepasswordComponent {
   selectedAvatar: string = '';
 
   newPassword: string = ''; 
+  confirmPassword: string = ''; // Add confirmPassword property
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -117,10 +118,12 @@ export class ChangepasswordComponent {
   }
 
   changePassword() {
-    // Implement logic to update the username using this.newUsername
-    // You can send an HTTP request to your backend to update the username
-    // Provide feedback to the user, e.g., display a message confirming the username change
-    alert('Passwort erfolgreich geändert!');
+    if (this.newPassword === this.confirmPassword) {
+      this.selectedPassword = this.newPassword;
+      this.goToAccount();
+    } else {
+      alert('Die eingegebenen Passwörter stimmen nicht überein.');
+    }
   }
 
 }
