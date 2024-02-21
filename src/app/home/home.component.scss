@@ -1,5 +1,4 @@
 .wholePage{
-    //background-color: blue !important;
     background-image: url(/assets/images/app-bg-new.png);
     background-size: 100% 100%;
     width: 100vw;
@@ -11,13 +10,13 @@
 
   .selected {
     background-color: hsla(203, 94%, 20%);;
-    color: white; // Change text color to maintain visibility
+    color: white; 
   }
   
   .flags {
     display: flex;
-    justify-content: center; /* Horizontally center the flags */
-    align-items: center; /* Vertically center the flags */
+    justify-content: center; 
+    align-items: center; 
     margin-top: 2px;
   }
   
@@ -46,19 +45,16 @@
     background-size: 100% 100%;
   }
   
-  /* Apply Schalke background if schalkeBGselected is true */
   .schalke-bg {
     background-image: url(/assets/images/app-bg-schalke.png);
     background-size: 100% 100%;
   }
   
-  /* Apply Dortmund background if dortmundBGselected is true */
   .dortmund-bg {
     background-image: url(/assets/images/app-bg-dortmund.png);
     background-size: 100% 100%;
   }
   
-  /* Apply Bayern background if bayernBGselected is true */
   .bayern-bg {
     background-image: url(/assets/images/app-bg-bayern.png);
     background-size: 100% 100%;

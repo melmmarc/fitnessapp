@@ -24,7 +24,7 @@ export class ChangeusernameComponent {
   dortmundBGselected:boolean = false;
   bayernBGselected:boolean = false;
 
-  newUsername: string = ''; // Variable to store the new username
+  newUsername: string = ''; 
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -141,9 +141,7 @@ export class ChangeusernameComponent {
   }
 
   changeUsername() {
-    // Check if the new username is not empty
     if (this.newUsername.trim() !== '') {
-      // Update the current username with the new value
       this.username = this.newUsername;
       this.goToAccount();
     }

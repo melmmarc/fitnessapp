@@ -34,29 +34,29 @@
 }
 
 .content {
-  overflow-y: auto; /* Allow vertical scrollbar when content overflows */
-  max-height: calc(100vh - 6vh); /* Adjust the value to accommodate the height of your header */
+  overflow-y: auto; 
+  max-height: calc(100vh - 6vh); 
   overflow: scroll;
 }
 
-/* For webkit-based browsers like Chrome and Safari */
+
 .content::-webkit-scrollbar {
-  width: 12px; /* Adjust the width as needed */
+  width: 12px; 
 }
 
 .content::-webkit-scrollbar-track {
-  background: white; /* Set the background color of the scrollbar track to white */
+  background: white; 
 }
 
 .content::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.8); /* Set the color of the scrollbar thumb */
-  border-radius: 6px; /* Round the corners of the scrollbar thumb */
-  border: none; /* Remove the border */
-  box-shadow: none; /* Remove any box-shadow */
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 6px; 
+  border: none; 
+  box-shadow: none; 
 }
 
 .content::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.4); /* Set the color of the scrollbar thumb on hover */
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .blue-bg {
@@ -74,19 +74,16 @@
   background-size: 100% 100%;
 }
 
-/* Apply Schalke background if schalkeBGselected is true */
 .schalke-bg {
   background-image: url(/assets/images/app-bg-schalke.png);
   background-size: 100% 100%;
 }
 
-/* Apply Dortmund background if dortmundBGselected is true */
 .dortmund-bg {
   background-image: url(/assets/images/app-bg-dortmund.png);
   background-size: 100% 100%;
 }
 
-/* Apply Bayern background if bayernBGselected is true */
 .bayern-bg {
   background-image: url(/assets/images/app-bg-bayern.png);
   background-size: 100% 100%;

@@ -1,5 +1,4 @@
 .wholePage{
-    //background-color: blue !important;
     background-image: url(/assets/images/app-bg-new.png);
     background-size: 100% 100%;
     width: 100vw;
@@ -35,28 +34,26 @@
     background-color: rgb(1, 39, 62);
   }
  
-  /* Add border to the entire table */
 table {
-  border-collapse: collapse; /* Collapse borders to avoid double borders */
+  border-collapse: collapse; 
 }
 
-/* Add border to table rows and cells */
 tr {
-  border-bottom: 1px solid #ddd; /* Add bottom border to each row */
+  border-bottom: 1px solid #ddd; 
 }
 
 td {
-  border-right: 1px solid #ddd; /* Add right border to each cell */
-  padding: 8px; /* Add some padding for better appearance */
-  border-left: 1px solid #ddd; /* Add left border to the table */
-  border-right: 1px solid #ddd; /* Add right border to the table */
+  border-right: 1px solid #ddd; 
+  padding: 8px;
+  border-left: 1px solid #ddd; 
+  border-right: 1px solid #ddd; 
 }
 
 .avatar {
-  display: block; /* Ensures the image is displayed as a block element */
-  margin: 0 auto; /* Centers the image horizontally */
-  width: 200px; /* Adjust the width to your desired size */
-  height: auto; /* Automatically adjusts the height while maintaining the aspect ratio */
+  display: block; 
+  margin: 0 auto;
+  width: 200px; 
+  height: auto; 
 }
 
 .blue-bg {
@@ -74,19 +71,16 @@ td {
   background-size: 100% 100%;
 }
 
-/* Apply Schalke background if schalkeBGselected is true */
 .schalke-bg {
   background-image: url(/assets/images/app-bg-schalke.png);
   background-size: 100% 100%;
 }
 
-/* Apply Dortmund background if dortmundBGselected is true */
 .dortmund-bg {
   background-image: url(/assets/images/app-bg-dortmund.png);
   background-size: 100% 100%;
 }
 
-/* Apply Bayern background if bayernBGselected is true */
 .bayern-bg {
   background-image: url(/assets/images/app-bg-bayern.png);
   background-size: 100% 100%;

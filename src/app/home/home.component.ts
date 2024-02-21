@@ -41,16 +41,12 @@ export class HomeComponent {
   male4Selected:boolean = false;
   male5Selected:boolean = false;
 
-  // Function to change language to German ('de')
   switchToGerman() {
     this.language = 'de';
-    // You can add additional logic here if needed
   }
 
-  // Function to change language to English ('en')
   switchToEnglish() {
     this.language = 'en';
-    // You can add additional logic here if needed
   }
 
   updateUsername(username: string) {
@@ -66,11 +62,11 @@ export class HomeComponent {
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
-      // Pass the entered username and language to the menu component
+
       this.router.navigate(['/menu'], { queryParams: { 
         username: userData.username, 
         selectedAvatar: userData.selectedAvatar,
-        language: userData.language,  // Pass the selected language
+        language: userData.language,  
         selectedGoal: userData.goal,
         email: userData.email,
         password: userData.password,
@@ -98,7 +94,7 @@ export class HomeComponent {
     } else if (this.female5Selected) {
       return 'female5';
     } else {
-      return ''; // Return empty string if no avatar is selected
+      return ''; 
     }
   }
 
