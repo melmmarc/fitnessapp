@@ -39,6 +39,8 @@ export class ChangeavatarComponent {
     });
   }
 
+  
+
   goToMenu(){
     this.router.navigate(['/menu'], {
       queryParams: {
@@ -123,8 +125,26 @@ export class ChangeavatarComponent {
     });
   }
 
-  updateAvatar(){
-    // code
+  updateAvatar(): void {
+    // Assuming each avatar selection sets the corresponding property to true when selected
+    if (this.female2Selected) {
+      this.selectedAvatar = 'female2';
+    } else if (this.female3Selected) {
+      this.selectedAvatar = 'female3';
+    } else if (this.female5Selected) {
+      this.selectedAvatar = 'female5';
+    } else if (this.male1Selected) {
+      this.selectedAvatar = 'male1';
+    } else if (this.male4Selected) {
+      this.selectedAvatar = 'male4';
+    } else if (this.male5Selected) {
+      this.selectedAvatar = 'male5';
+    }
+    this.goToAccount();
+  
+    // Optionally, you can perform further actions here, such as saving the selected avatar to a database
+  
+    // Navigate to a different page or perform other actions if needed
   }
 
   toggleFemale2():void{
@@ -204,6 +224,8 @@ export class ChangeavatarComponent {
       this.male5Selected = true;
     }
   }
+
+  
 
   
 
