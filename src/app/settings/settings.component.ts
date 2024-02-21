@@ -37,9 +37,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -51,9 +51,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -65,9 +65,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -79,9 +79,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -93,9 +93,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -107,9 +107,9 @@ export class SettingsComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
