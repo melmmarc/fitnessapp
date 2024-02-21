@@ -59,8 +59,12 @@ export class HomeComponent {
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
-      // Pass the entered username to the menu component
-      this.router.navigate(['/menu'], { queryParams: { username: userData.username, selectedAvatar: userData.selectedAvatar }});
+      // Pass the entered username and language to the menu component
+      this.router.navigate(['/menu'], { queryParams: { 
+        username: userData.username, 
+        selectedAvatar: userData.selectedAvatar,
+        language: userData.language  // Pass the selected language
+      }});
     }).catch((err) => {
       console.log(err);
     });

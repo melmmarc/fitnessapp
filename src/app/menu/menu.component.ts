@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent {
 
-  language:string = 'de';
+  language:string = '';
   username:string = '';
   selectedAvatar: string = '';
 
@@ -22,8 +22,10 @@ export class MenuComponent {
     this.route.queryParams.subscribe(params => {
       this.username = params['username'];
       this.selectedAvatar = params['selectedAvatar'];
+      this.language = params['language']; // Retrieve the selected language
       console.log('Username received in MenuComponent:', this.username);
       console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
+      console.log('Selected Language received in MenuComponent:', this.language); // Log the selected language
     });
   }
 
