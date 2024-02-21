@@ -47,39 +47,102 @@ export class AccountComponent {
   }
 
   goToMenu(){
-    this.router.navigateByUrl('/menu');
+    this.router.navigate(['/menu'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
-  goToLocation(){
-    this.router.navigateByUrl('/location');
+  goToLocation() {
+    this.router.navigate(['/location'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToBMI(){
-    this.router.navigateByUrl('/bmi');
+    this.router.navigate(['/bmi'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToTimer(){
-    this.router.navigateByUrl('/timer');
+    this.router.navigate(['/timer'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToChangeavatar(){
-    this.router.navigateByUrl('/changeavatar');
+    this.router.navigate(['/changeavatar'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToChangeusername(){
-    this.router.navigateByUrl('/changeusername');
+    this.router.navigate(['/changeusername'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToChangepassword(){
-    this.router.navigateByUrl('/changepassword');
+    this.router.navigate(['/changepassword'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToChangebackground(){
-    this.router.navigateByUrl('/changebackground');
+    this.router.navigate(['/changebackground'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToSettings(){
-    this.router.navigateByUrl('/settings');
+    this.router.navigate(['/settings'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
 }
