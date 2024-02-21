@@ -248,6 +248,13 @@ export class ChangebackgroundComponent {
       }
     });
   }
+
+  buyBackground() {
+    // This method is invoked when the "Kaufen" button is clicked for Schalke background
+    // You can add logic here to handle the purchase process or navigate to a purchase page
+    // For example, you can navigate to a purchase page with query parameters indicating the selected background
+    
+  }
 }
 
   

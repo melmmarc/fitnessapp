@@ -141,9 +141,19 @@
       </div>
 
       <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
-        <button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'" (click)="saveSelectedBG()">Speichern</button>
-<button style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'" (click)="saveSelectedBG()">Save</button>
+        <button style="height: 35px; width: 49vw; border-radius: 10px;" (click)="saveSelectedBG()" *ngIf="language=='de' && (blueBGselected || blackBGselected || orangeBGselected)">Speichern</button>
+
+        <button style="height: 35px; width: 49vw; border-radius: 10px;" (click)="saveSelectedBG()" *ngIf="language=='en' && (blueBGselected || blackBGselected || orangeBGselected)">Save</button>
+        
         </div>
+
+        <button *ngIf="language=='de' && (schalkeBGselected || dortmundBGselected || bayernBGselected)" (click)="buyBackground()" style="height: 35px; width: 49vw; border-radius: 10px;">
+          Kaufen
+        </button>
+
+        <button *ngIf="language=='en' && (schalkeBGselected || dortmundBGselected || bayernBGselected)" (click)="buyBackground()" style="height: 35px; width: 49vw; border-radius: 10px;">
+          Purchase
+        </button>
     
       <div class="menu">
         <button (click)="goToMenu()">
