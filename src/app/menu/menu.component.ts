@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent {
 
-  language:string = '';
+  language:string = 'de';
   username:string = '';
   selectedAvatar: string = '';
   selectedGoal: string = '';
@@ -16,6 +16,7 @@ export class MenuComponent {
   gymday:boolean = true;
   cardioday:boolean = false;
   restday:boolean = false;
+  
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -32,23 +33,58 @@ export class MenuComponent {
   }
 
   goToMenu(){
-    this.router.navigateByUrl('/menu');
+    this.router.navigate(['/menu'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
-  goToLocation(){
-    this.router.navigateByUrl('/location');
+  goToLocation() {
+    this.router.navigate(['/location'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToBMI(){
-    this.router.navigateByUrl('/bmi');
+    this.router.navigate(['/bmi'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToTimer(){
-    this.router.navigateByUrl('/timer');
+    this.router.navigate(['/timer'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToSettings(){
-    this.router.navigateByUrl('/settings');
+    this.router.navigate(['/settings'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
 }

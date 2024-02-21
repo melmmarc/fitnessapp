@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-location',
@@ -8,26 +8,80 @@ import { Router } from '@angular/router';
 })
 export class LocationComponent{
 
-  constructor(private router: Router) {}
+  language:string = 'de';
+  username:string = '';
+  selectedAvatar: string = '';
+  selectedGoal: string = '';
+
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.username = params['username'];
+      this.selectedAvatar = params['selectedAvatar'];
+      this.language = params['language']; 
+      this.selectedGoal = params['selectedGoal']; 
+      console.log('Username received in MenuComponent:', this.username);
+      console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
+      console.log('Selected Language received in MenuComponent:', this.language); // Log the selected language
+    });
+  }
 
 
   goToMenu(){
-    this.router.navigateByUrl('/menu');
+    this.router.navigate(['/menu'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
-  goToLocation(){
-    // No action needed as we're already in the location page.
+  goToLocation() {
+    this.router.navigate(['/location'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToBMI(){
-    this.router.navigateByUrl('/bmi');
+    this.router.navigate(['/bmi'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToTimer(){
-    this.router.navigateByUrl('/timer');
+    this.router.navigate(['/timer'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 
   goToSettings(){
-    this.router.navigateByUrl('/settings');
+    this.router.navigate(['/settings'], {
+      queryParams: {
+        username: this.username,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+      }
+    });
   }
 }
