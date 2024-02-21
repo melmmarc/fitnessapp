@@ -35,9 +35,6 @@ export class ChangebackgroundComponent {
       this.selectedEmail = params['email']; // Add email
       this.selectedPassword = params['password']; // Add password
       this.selectedFrequency = params['frequency']; // Add frequency
-      console.log('Username received in MenuComponent:', this.username);
-      console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
-      console.log('Selected Language received in MenuComponent:', this.language); // Log the selected language
     });
   }
 

@@ -47,7 +47,6 @@ export class HomeComponent {
 
   updateUsername(username: string) {
     this.selectedUsername = username;
-    console.log('Selected username: ', this.selectedUsername);
   }
 
   addData(f: any) {
@@ -56,7 +55,6 @@ export class HomeComponent {
     userData.frequency = this.selectedFrequency;
     userData.selectedAvatar = this.getSelectedAvatar();
     userData.language = this.language;
-    console.log('Data to be stored:', userData);
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
@@ -99,7 +97,6 @@ export class HomeComponent {
     const value = event.target.value;
     if (value) {
       this.selectedGoal = value;
-      console.log('Selected goal: ', this.selectedGoal);
     }
   }
 
@@ -107,7 +104,6 @@ export class HomeComponent {
     const value = event.target.value;
     if (value) {
       this.selectedFrequency = value;
-      console.log('Selected frequency: ', this.selectedFrequency);
     }
   }
 
