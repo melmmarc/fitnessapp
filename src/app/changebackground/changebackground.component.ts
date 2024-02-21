@@ -38,6 +38,9 @@ export class ChangebackgroundComponent {
       this.selectedFrequency = params['frequency']; 
       this.selectedBG = params['selectedBG'];  
       this.updateBackgroundSelection();
+      if (this.selectedBG === 'blue') {
+        this.blueBGselected = true;
+      }
     });
   }
 
