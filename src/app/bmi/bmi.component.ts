@@ -30,7 +30,7 @@ export class BmiComponent {
 
   age: number = 30;
   gender: string = 'male';
-  activityLevel: string = 'normal'; // Default activity level
+  activityLevel: string = 'normal'; 
   dailyCalorieIntake: number = 0;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
@@ -184,8 +184,6 @@ export class BmiComponent {
   }
 
   calculateDailyCalorieIntake() {
-    // Implement your chosen formula to calculate daily calorie intake
-    // For example, using the Mifflin-St Jeor Equation
     if(this.language=='de')
     {
       if (this.age && this.gender && this.weight && this.height && this.activityLevel) {
@@ -195,7 +193,7 @@ export class BmiComponent {
         } else {
           bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
         }
-        // Adjust BMR based on activity level
+
         let activityMultiplier: number;
         switch (this.activityLevel) {
           case 'low':
@@ -208,7 +206,7 @@ export class BmiComponent {
             activityMultiplier = 1.9;
             break;
           default:
-            activityMultiplier = 1.55; // Default to 'normal'
+            activityMultiplier = 1.55; 
             break;
         }
         this.dailyCalorieIntake = bmr * activityMultiplier;
@@ -222,7 +220,6 @@ export class BmiComponent {
         } else {
           bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age - 161;
         }
-        // Adjust BMR based on activity level
         let activityMultiplier: number;
         switch (this.activityLevel) {
           case 'low':
@@ -235,7 +232,7 @@ export class BmiComponent {
             activityMultiplier = 1.9;
             break;
           default:
-            activityMultiplier = 1.55; // Default to 'normal'
+            activityMultiplier = 1.55; 
             break;
         }
         this.dailyCalorieIntake = bmr * activityMultiplier;

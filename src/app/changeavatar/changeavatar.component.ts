@@ -150,7 +150,6 @@ export class ChangeavatarComponent {
   }
 
   updateAvatar(): void {
-    // Assuming each avatar selection sets the corresponding property to true when selected
     if (this.female2Selected) {
       this.selectedAvatar = 'female2';
     } else if (this.female3Selected) {
@@ -166,9 +165,6 @@ export class ChangeavatarComponent {
     }
     this.goToAccount();
   
-    // Optionally, you can perform further actions here, such as saving the selected avatar to a database
-  
-    // Navigate to a different page or perform other actions if needed
   }
 
   toggleFemale2():void{

@@ -33,7 +33,6 @@
           <h3 style="margin-bottom: 0" *ngIf="language=='en'">Your BMI: {{ bmi | number:'1.1-1' }} ({{ getBMICategory(bmi) }})</h3>
         </div>
 
-        <!-- Daily calorie intake calculator input fields -->
   <div style="margin-top: 6vh; margin-bottom: 25px;">
     <h2 style="text-align: center; margin-top: 2vh; margin-bottom: 5vh;" *ngIf="language=='de'">Kalorienbedarf Rechner</h2>
     <h2 style="text-align: center; margin-top: 2vh; margin-bottom: 5vh;" *ngIf="language=='en'">Calorie Calculator</h2>
@@ -82,14 +81,12 @@
       <option value="high" *ngIf="language=='en'">High</option>
     </select>
   </div>
-  
-  <!-- Button to calculate daily calorie intake -->
+
   <div style="margin-left: auto; margin-right: auto; margin-top: 5vh; width: fit-content">
     <button (click)="calculateDailyCalorieIntake()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='de'">Kalorienverbrauch berechnen</button>
     <button (click)="calculateDailyCalorieIntake()" style="height: 35px; width: 49vw; border-radius: 10px;" *ngIf="language=='en'">Calculate Calorie Use</button>
   </div>
   
-  <!-- Display daily calorie intake -->
   <div *ngIf="dailyCalorieIntake && language == 'de' " style="text-align: center; margin-top: 1vh; font-size: 14px;">
     <h3>Täglicher Kalorienverbrauch: {{ dailyCalorieIntake }} </h3>
   </div>

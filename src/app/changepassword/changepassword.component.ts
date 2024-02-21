@@ -25,7 +25,7 @@ export class ChangepasswordComponent {
   bayernBGselected:boolean = false;
 
   newPassword: string = ''; 
-  confirmPassword: string = ''; // Add confirmPassword property
+  confirmPassword: string = ''; 
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 

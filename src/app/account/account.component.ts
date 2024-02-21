@@ -56,16 +56,12 @@ export class AccountComponent {
     this.bayernBGselected = this.selectedBG === 'bayern';
   }
 
-  // Function to change language to German ('de')
   switchToGerman() {
     this.language = 'de';
-    // You can add additional logic here if needed
   }
 
-  // Function to change language to English ('en')
   switchToEnglish() {
     this.language = 'en';
-    // You can add additional logic here if needed
   }
 
   goToMenu(){

@@ -1,5 +1,4 @@
 .wholePage{
-    //background-color: blue !important;
     background-image: url(/assets/images/app-bg-new.png);
     background-size: 100% 100%;
     width: 100vw;
@@ -45,13 +44,13 @@
   }
   
   .center-container div {
-    margin-bottom: 10px; /* Add some space between buttons */
+    margin-bottom: 10px; 
   }
 
   .flags {
     display: flex;
-    justify-content: center; /* Horizontally center the flags */
-    align-items: center; /* Vertically center the flags */
+    justify-content: center; 
+    align-items: center; 
     margin-top: 40px;
   }
   
@@ -66,10 +65,10 @@
   }
 
   .avatar {
-    display: block; /* Ensures the image is displayed as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-    width: 200px; /* Adjust the width to your desired size */
-    height: auto; /* Automatically adjusts the height while maintaining the aspect ratio */
+    display: block; 
+    margin: 0 auto;
+    width: 200px; 
+    height: auto; 
   }
 
   .blue-bg {
@@ -87,19 +86,16 @@
     background-size: 100% 100%;
   }
   
-  /* Apply Schalke background if schalkeBGselected is true */
   .schalke-bg {
     background-image: url(/assets/images/app-bg-schalke.png);
     background-size: 100% 100%;
   }
   
-  /* Apply Dortmund background if dortmundBGselected is true */
   .dortmund-bg {
     background-image: url(/assets/images/app-bg-dortmund.png);
     background-size: 100% 100%;
   }
   
-  /* Apply Bayern background if bayernBGselected is true */
   .bayern-bg {
     background-image: url(/assets/images/app-bg-bayern.png);
     background-size: 100% 100%;
