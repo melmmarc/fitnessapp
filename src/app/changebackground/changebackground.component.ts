@@ -249,12 +249,76 @@ export class ChangebackgroundComponent {
     });
   }
 
-  buyBackground() {
-    // This method is invoked when the "Kaufen" button is clicked for Schalke background
-    // You can add logic here to handle the purchase process or navigate to a purchase page
-    // For example, you can navigate to a purchase page with query parameters indicating the selected background
-    
+  buyBackgroundDE(): void {
+    // Logic to save the currently selected background into selectedBG
+    if (confirm('Möchten Sie diesen Hintergrund wirklich kaufen?')) {
+      if (this.blueBGselected) {
+        this.selectedBG = 'blue';
+      } else if (this.blackBGselected) {
+        this.selectedBG = 'black';
+      } else if (this.orangeBGselected) {
+        this.selectedBG = 'orange';
+      } else if (this.schalkeBGselected) {
+        this.selectedBG = 'schalke';
+      } else if (this.dortmundBGselected) {
+        this.selectedBG = 'dortmund';
+      } else if (this.bayernBGselected) {
+        this.selectedBG = 'bayern';
+      }
+  
+      // You can perform any additional logic here before saving if needed.
+  
+      // Now, navigate to the desired page and pass the updated selectedBG value.
+      this.router.navigate(['/account'], {
+        queryParams: {
+          username: this.username,
+          selectedAvatar: this.selectedAvatar,
+          language: this.language,
+          selectedGoal: this.selectedGoal,
+          email: this.selectedEmail,
+          password: this.selectedPassword,
+          frequency: this.selectedFrequency,
+          selectedBG: this.selectedBG,
+        }
+      });
+    }
   }
+
+  buyBackgroundEN(): void {
+    // Logic to save the currently selected background into selectedBG
+    if (confirm('Do you really want to buy this background image?')) {
+      if (this.blueBGselected) {
+        this.selectedBG = 'blue';
+      } else if (this.blackBGselected) {
+        this.selectedBG = 'black';
+      } else if (this.orangeBGselected) {
+        this.selectedBG = 'orange';
+      } else if (this.schalkeBGselected) {
+        this.selectedBG = 'schalke';
+      } else if (this.dortmundBGselected) {
+        this.selectedBG = 'dortmund';
+      } else if (this.bayernBGselected) {
+        this.selectedBG = 'bayern';
+      }
+  
+      // You can perform any additional logic here before saving if needed.
+  
+      // Now, navigate to the desired page and pass the updated selectedBG value.
+      this.router.navigate(['/account'], {
+        queryParams: {
+          username: this.username,
+          selectedAvatar: this.selectedAvatar,
+          language: this.language,
+          selectedGoal: this.selectedGoal,
+          email: this.selectedEmail,
+          password: this.selectedPassword,
+          frequency: this.selectedFrequency,
+          selectedBG: this.selectedBG,
+        }
+      });
+    }
+  }
+
 }
 
   
