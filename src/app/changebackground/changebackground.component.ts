@@ -17,7 +17,7 @@ export class ChangebackgroundComponent {
   selectedAvatar: string = '';
   selectedBG: string = 'blue';
 
-  blueBGselected:boolean = true;
+  blueBGselected:boolean = false;
   blackBGselected:boolean = false;
   orangeBGselected:boolean = false;
   schalkeBGselected:boolean = false;
