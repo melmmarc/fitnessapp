@@ -251,7 +251,7 @@ export class ChangebackgroundComponent {
 
   buyBackgroundDE(): void {
     // Logic to save the currently selected background into selectedBG
-    if (confirm('Möchten Sie diesen Hintergrund wirklich kaufen?')) {
+    if (confirm('Möchten Sie diesen Hintergrund wirklich für 1,99€ kaufen?')) {
       if (this.blueBGselected) {
         this.selectedBG = 'blue';
       } else if (this.blackBGselected) {
@@ -286,7 +286,7 @@ export class ChangebackgroundComponent {
 
   buyBackgroundEN(): void {
     // Logic to save the currently selected background into selectedBG
-    if (confirm('Do you really want to buy this background image?')) {
+    if (confirm('Do you really want to buy this background image for 1.99€?')) {
       if (this.blueBGselected) {
         this.selectedBG = 'blue';
       } else if (this.blackBGselected) {
