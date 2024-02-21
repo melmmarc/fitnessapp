@@ -15,6 +15,13 @@
       </div>
 
       <!-- Input field for new username -->
+
+      <div style="margin-bottom: 2vh;">
+        <label for="newUsername" *ngIf="language=='de'">Aktueller Benutzername:</label>
+        <label for="newUsername" *ngIf="language=='en'">Current Username:</label>
+        <span style="float: right"> {{username}} </span>
+      </div>
+      
   <div>
     <label for="newUsername" *ngIf="language=='de'">Neuer Benutzername:</label>
     <label for="newUsername" *ngIf="language=='en'">New Username:</label>
