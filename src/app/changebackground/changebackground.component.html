@@ -1,7 +1,10 @@
 <div class="wholePage" 
   [class.blue-bg]="blackBGselected"
   [class.black-bg]="blackBGselected"
-  [class.orange-bg]="orangeBGselected">
+  [class.orange-bg]="orangeBGselected"
+  [class.schalke-bg]="schalkeBGselected"
+  [class.dortmund-bg]="dortmundBGselected"
+  [class.bayern-bg]="bayernBGselected">
     <app-header></app-header>
 
     <div class="back" style="width: fit-content; margin-top: 5px;" (click)="goToAccount()">
@@ -81,7 +84,7 @@
 
       <span *ngIf="schalkeBGselected==true">
     <img
-      src="../../assets/images/app-bg-schalke-selected.png"
+      src="../../assets/images/app-bg-schalke-selected-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-right: 8px;"
@@ -90,7 +93,7 @@
   <span *ngIf="schalkeBGselected==false">
     <img
     (click)="toggleSchalke()"
-      src="../../assets/images/app-bg-schalke.png"
+      src="../../assets/images/app-bg-schalke-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-right: 8px;"
@@ -98,7 +101,7 @@
   </span>
   <span *ngIf="dortmundBGselected==true">
     <img
-      src="../../assets/images/app-bg-dortmund-selected.png"
+      src="../../assets/images/app-bg-dortmund-selected-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-right: 8px; margin-left: 8px;"
@@ -107,7 +110,7 @@
   <span *ngIf="dortmundBGselected==false">
     <img
     (click)="toggleDortmund()"
-      src="../../assets/images/app-bg-dortmund.png"
+      src="../../assets/images/app-bg-dortmund-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-right: 8px; margin-left: 8px;"
@@ -115,7 +118,7 @@
   </span>
   <span *ngIf="bayernBGselected==true">
     <img
-      src="../../assets/images/app-bg-bayern-selected.png"
+      src="../../assets/images/app-bg-bayern-selected-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-left: 8px;"
@@ -124,7 +127,7 @@
   <span *ngIf="bayernBGselected==false">
     <img
     (click)="toggleBayern()"
-      src="../../assets/images/app-bg-bayern.png"
+      src="../../assets/images/app-bg-bayern-grey.png"
       width="90vw"
       height="160vw"
       style="border-radius: 5%; margin-left: 8px;"
