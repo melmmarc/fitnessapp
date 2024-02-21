@@ -117,10 +117,12 @@ export class ChangeusernameComponent {
   }
 
   changeUsername() {
-    // Implement logic to update the username using this.newUsername
-    // You can send an HTTP request to your backend to update the username
-    // Provide feedback to the user, e.g., display a message confirming the username change
-    alert('Benutzername erfolgreich geändert!');
+    // Check if the new username is not empty
+    if (this.newUsername.trim() !== '') {
+      // Update the current username with the new value
+      this.username = this.newUsername;
+      this.goToAccount();
+    }
   }
 
 }
