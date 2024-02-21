@@ -50,20 +50,23 @@ export class HomeComponent {
   }
 
   addData(f: any) {
-    const userData = f.value; // Extract form data
-    userData.goal = this.selectedGoal; // Add selected goal to userData
-    userData.frequency = this.selectedFrequency; // Add selected frequency to userData
-    userData.selectedAvatar = this.getSelectedAvatar(); // Add selected avatar to userData
-    userData.language = this.language; // Add selected language to userData
-    console.log('Data to be stored:', userData); // Log userData to check if language is included
+    const userData = f.value;
+    userData.goal = this.selectedGoal;
+    userData.frequency = this.selectedFrequency;
+    userData.selectedAvatar = this.getSelectedAvatar();
+    userData.language = this.language;
+    console.log('Data to be stored:', userData);
     const collectionInstance = collection(this.firestore, 'users');
     addDoc(collectionInstance, userData).then(() => {
       console.log('Data saved successfully');
-      this.router.navigateByUrl('/menu'); // Navigate to /menu route after data is saved
+      // Pass the entered username to the menu component
+      this.router.navigate(['/menu'], { queryParams: { username: userData.username }});
     }).catch((err) => {
       console.log(err);
     });
   }
+
+
 
   getSelectedAvatar(): string {
     if (this.male1Selected) {

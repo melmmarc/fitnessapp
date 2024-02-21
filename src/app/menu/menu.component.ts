@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class MenuComponent {
 
   language:string = 'de';
+  username:string = 'username';
 
   gymday:boolean = true;
   cardioday:boolean = false;
@@ -21,7 +22,14 @@ export class MenuComponent {
   female3selected:boolean = false;
   female5selected:boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.username = params['username'];
+      console.log('Username received in MenuComponent:', this.username);
+    });
+  }
 
   goToMenu(){
     this.router.navigateByUrl('/menu');
