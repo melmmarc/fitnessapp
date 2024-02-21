@@ -142,13 +142,35 @@ export class SettingsComponent {
 
   logOutDE(): void {
     if (confirm('Wollen Sie sich wirklich abmelden?')) {
-        this.router.navigateByUrl('/login');
+      this.router.navigate(['/login'], {
+        queryParams: {
+          username: this.username,
+          selectedAvatar: this.selectedAvatar,
+          language: this.language,
+          selectedGoal: this.selectedGoal,
+          email: this.selectedEmail,
+          password: this.selectedPassword,
+          frequency: this.selectedFrequency,
+          selectedBG: this.selectedBG,
+        }
+      });
     }
   }
 
   logOutEN(): void {
     if (confirm('Do you really want to logout?')) {
-        this.router.navigateByUrl('/login');
+      this.router.navigate(['/login'], {
+        queryParams: {
+          username: this.username,
+          selectedAvatar: this.selectedAvatar,
+          language: this.language,
+          selectedGoal: this.selectedGoal,
+          email: this.selectedEmail,
+          password: this.selectedPassword,
+          frequency: this.selectedFrequency,
+          selectedBG: this.selectedBG,
+        }
+      });
     }
   }
 
