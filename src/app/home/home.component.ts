@@ -199,13 +199,15 @@ export class HomeComponent {
     console.log('Password:', this.selectedPassword);
     console.log('Goal:', this.selectedGoal);
     console.log('Frequency:', this.selectedFrequency);
+    console.log('Avatar:', this.getSelectedAvatar());
   
     return (
       this.selectedUsername.trim() !== '' &&
       this.selectedEmail.trim() !== '' &&
       this.selectedPassword.trim() !== '' &&
       this.selectedGoal !== '' &&
-      this.selectedFrequency !== ''
+      this.selectedFrequency !== '' && 
+      this.getSelectedAvatar() !== ''
     );
   }
 }
