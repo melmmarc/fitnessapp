@@ -24,9 +24,9 @@ export class SettingsComponent {
       this.selectedAvatar = params['selectedAvatar'];
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
-      this.selectedEmail = params['selectedEmail'];
-      this.selectedPassword = params['selectedPassword'];
-      this.selectedFrequency = params['selectedFrequency'];
+      this.selectedEmail = params['email']; 
+      this.selectedPassword = params['password']; 
+      this.selectedFrequency = params['frequency']; 
     });
   }
 

@@ -28,9 +28,9 @@ export class TimerComponent {
       this.selectedAvatar = params['selectedAvatar'];
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
-      this.selectedEmail = params['selectedEmail'];
-      this.selectedPassword = params['selectedPassword'];
-      this.selectedFrequency = params['selectedFrequency'];
+      this.selectedEmail = params['email']; 
+      this.selectedPassword = params['password']; 
+      this.selectedFrequency = params['frequency']; 
     });
   }
 
@@ -61,16 +61,16 @@ export class TimerComponent {
     return `${minutes}:${seconds}`;
   }
 
-  goToMenu() {
+  goToMenu(){
     this.router.navigate(['/menu'], {
       queryParams: {
         username: this.username,
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -82,9 +82,9 @@ export class TimerComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -96,9 +96,9 @@ export class TimerComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -110,9 +110,9 @@ export class TimerComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -124,9 +124,9 @@ export class TimerComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }

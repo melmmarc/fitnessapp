@@ -30,7 +30,7 @@ export class HeaderComponent {
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
       this.selectedEmail = params['email']; 
-      this.selectedPassword = params['password'];
+      this.selectedPassword = params['password']; 
       this.selectedFrequency = params['frequency']; 
     });
   }
@@ -40,12 +40,12 @@ export class HeaderComponent {
       this.router.navigate(['/menu'], {
         queryParams: {
           username: this.username,
-          selectedAvatar: this.selectedAvatar,
-          language: this.language,
-          selectedGoal: this.selectedGoal,
-          selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        selectedAvatar: this.selectedAvatar,
+        language: this.language,
+        selectedGoal: this.selectedGoal,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
         }
       });
     }
@@ -58,9 +58,9 @@ export class HeaderComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -72,9 +72,9 @@ export class HeaderComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }

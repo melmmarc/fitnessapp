@@ -26,9 +26,9 @@ export class LoginComponent {
       this.selectedAvatar = params['selectedAvatar'];
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
-      this.selectedEmail = params['email']; // Add email
-      this.selectedPassword = params['password']; // Add password
-      this.selectedFrequency = params['frequency']; // Add frequency
+      this.selectedEmail = params['email']; 
+      this.selectedPassword = params['password']; 
+      this.selectedFrequency = params['frequency']; 
     });
   }
 

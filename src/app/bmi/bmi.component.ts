@@ -33,9 +33,9 @@ export class BmiComponent {
       this.selectedAvatar = params['selectedAvatar'];
       this.language = params['language']; 
       this.selectedGoal = params['selectedGoal']; 
-      this.selectedEmail = params['selectedEmail'];
-      this.selectedPassword = params['selectedPassword'];
-      this.selectedFrequency = params['selectedFrequency'];
+      this.selectedEmail = params['email']; 
+      this.selectedPassword = params['password']; 
+      this.selectedFrequency = params['frequency']; 
     });
   }
 
@@ -46,9 +46,9 @@ export class BmiComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -60,9 +60,9 @@ export class BmiComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -74,9 +74,9 @@ export class BmiComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -88,9 +88,9 @@ export class BmiComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
@@ -102,9 +102,9 @@ export class BmiComponent {
         selectedAvatar: this.selectedAvatar,
         language: this.language,
         selectedGoal: this.selectedGoal,
-        selectedEmail: this.selectedEmail,
-        selectedPassword: this.selectedPassword,
-        selectedFrequency: this.selectedFrequency,
+        email: this.selectedEmail,
+        password: this.selectedPassword,
+        frequency: this.selectedFrequency,
       }
     });
   }
