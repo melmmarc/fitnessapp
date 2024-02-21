@@ -11,6 +11,7 @@ export class MenuComponent {
   language:string = '';
   username:string = '';
   selectedAvatar: string = '';
+  selectedGoal: string = '';
 
   gymday:boolean = true;
   cardioday:boolean = false;
@@ -22,7 +23,8 @@ export class MenuComponent {
     this.route.queryParams.subscribe(params => {
       this.username = params['username'];
       this.selectedAvatar = params['selectedAvatar'];
-      this.language = params['language']; // Retrieve the selected language
+      this.language = params['language']; 
+      this.selectedGoal = params['selectedGoal']; 
       console.log('Username received in MenuComponent:', this.username);
       console.log('Selected Avatar received in MenuComponent:', this.selectedAvatar);
       console.log('Selected Language received in MenuComponent:', this.language); // Log the selected language

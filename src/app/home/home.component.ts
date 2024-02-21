@@ -63,7 +63,8 @@ export class HomeComponent {
       this.router.navigate(['/menu'], { queryParams: { 
         username: userData.username, 
         selectedAvatar: userData.selectedAvatar,
-        language: userData.language  // Pass the selected language
+        language: userData.language,  // Pass the selected language
+        selectedGoal: userData.goal,
       }});
     }).catch((err) => {
       console.log(err);
