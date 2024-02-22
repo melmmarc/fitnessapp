@@ -31,11 +31,11 @@ describe('TimerComponent', () => {
   it('should start timer', fakeAsync(() => {
     component.startTimer();
     expect(component.isRunning).toBe(true);
-    tick(1000); // Move forward 1 second
+    tick(1000); 
     expect(component.time).toBe(1);
-    tick(1000); // Move forward 1 more second
+    tick(1000); 
     expect(component.time).toBe(2);
-    component.stopTimer(); // Stop the timer
+    component.stopTimer(); 
   }));
 
   it('should stop timer', fakeAsync(() => {
@@ -62,10 +62,8 @@ describe('TimerComponent', () => {
     component.goToMenu();
     expect(navigateSpy).toHaveBeenCalledWith(['/menu'], {
       queryParams: jasmine.objectContaining({
-        // Fill with expected queryParams
       })
     });
   });
 
-  // Similarly, write tests for other navigation methods
 });

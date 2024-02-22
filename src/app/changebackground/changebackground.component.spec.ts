@@ -46,5 +46,4 @@ describe('ChangebackgroundComponent', () => {
     });
   });
 
-  // Add more tests for other component methods if necessary
 });

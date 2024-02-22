@@ -63,6 +63,4 @@ describe('MenuComponent', () => {
     expect(component.cardioday).toBeFalse();
     expect(component.restday).toBeFalse();
   });
-
-  // Add more test cases as needed...
 });

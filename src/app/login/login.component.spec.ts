@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import { Router } from '@angular/router'; // Add this line
+import { Router } from '@angular/router'; 
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
@@ -65,7 +65,6 @@ describe('LoginComponent', () => {
     component.updateBackgroundSelection();
     expect(component.blackBGselected).toBe(true);
     expect(component.orangeBGselected).toBe(false);
-    // test other cases similarly
   });
 
   it('should navigate to home page with correct query params', () => {

@@ -82,6 +82,5 @@ describe('BmiComponent', () => {
     expect(component.dailyCalorieIntake).toBeCloseTo(2983, 0);
   });
 
-  // Add more test cases as needed
 });
 

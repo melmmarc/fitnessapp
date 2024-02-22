@@ -52,7 +52,6 @@ describe('ChangeavatarComponent', () => {
     component.updateBackgroundSelection();
     expect(component.blackBGselected).toBeTrue();
     expect(component.blueBGselected).toBeFalse();
-    // Add similar expectations for other background selections
   });
 
   it('should update avatar and navigate to account', () => {
@@ -64,10 +63,8 @@ describe('ChangeavatarComponent', () => {
       queryParams: jasmine.objectContaining({
         username: component.username,
         selectedAvatar: 'female2',
-        // Add other query parameters
       })
     });
   });
 
-  // Add more test cases as needed for other methods and behaviors
 });

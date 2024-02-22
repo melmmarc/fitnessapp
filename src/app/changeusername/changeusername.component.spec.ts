@@ -55,7 +55,6 @@ describe('ChangeusernameComponent', () => {
     expect(component.dortmundBGselected).toBeFalsy();
     expect(component.bayernBGselected).toBeFalsy();
 
-    // Simulate change in selectedBG value
     component.selectedBG = 'black';
     component.updateBackgroundSelection();
 
@@ -86,5 +85,4 @@ describe('ChangeusernameComponent', () => {
     });
   });
 
-  // Similarly, write tests for other navigation methods and changeUsername method
 });

@@ -22,18 +22,17 @@ describe('SettingsComponent', () => {
   });
 
   it('should navigate to account on button click', () => {
-    spyOn(component, 'goToAccount' as never); // Explicitly define the type of the method
-    const button = fixture.nativeElement.querySelector('.go-to-account-button'); // Select the button by its class
-    button.click(); // Simulate a button click
-    expect(component.goToAccount).toHaveBeenCalled(); // Expect the goToAccount method to have been called
+    spyOn(component, 'goToAccount' as never); 
+    const button = fixture.nativeElement.querySelector('.go-to-account-button'); 
+    button.click(); 
+    expect(component.goToAccount).toHaveBeenCalled(); 
   });
 
   it('should log out when logout button is clicked', () => {
-    spyOn(component, 'logOutDE' as never); // Explicitly define the type of the method
-    const button = fixture.nativeElement.querySelector('.logout-button'); // Select the button by its class
-    button.click(); // Simulate a button click
-    expect(component.logOutDE).toHaveBeenCalled(); // Expect the logOutDE method to have been called
+    spyOn(component, 'logOutDE' as never); 
+    const button = fixture.nativeElement.querySelector('.logout-button'); 
+    button.click(); 
+    expect(component.logOutDE).toHaveBeenCalled(); 
   });
 
-  // Add more test cases as needed
 });

@@ -40,8 +40,7 @@ describe('ChangepasswordComponent', () => {
     };
     TestBed.overrideProvider(ActivatedRoute, { useValue: mockActivatedRoute });
 
-    // Spy on router.navigate
-    spyOn(component['router'], 'navigate').and.stub(); // Private property, use ['router'] instead of .router
+    spyOn(component['router'], 'navigate').and.stub(); 
 
     fixture.detectChanges();
   });
@@ -80,5 +79,4 @@ describe('ChangepasswordComponent', () => {
     });
   });
 
-  // Add more test cases for other methods as needed
 });

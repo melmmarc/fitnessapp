@@ -12,7 +12,7 @@ describe('HomeComponent', () => {
       declarations: [HomeComponent],
       imports: [RouterTestingModule],
       providers: [
-        { provide: Firestore, useValue: {} } // Mock Firestore dependency
+        { provide: Firestore, useValue: {} } 
       ]
     }).compileComponents();
   });
@@ -37,6 +37,5 @@ describe('HomeComponent', () => {
     expect(component.language).toEqual('en');
   });
 
-  // Add more test cases based on the component's methods and properties
   
 });

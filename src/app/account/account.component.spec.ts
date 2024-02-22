@@ -65,5 +65,4 @@ describe('AccountComponent', () => {
     expect(component.language).toEqual('en');
   });
 
-  // Add more tests as needed for other methods and functionalities
 });
