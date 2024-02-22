@@ -18,12 +18,12 @@
 
       <img [src]="'../../assets/images/menu-avatars/' + selectedAvatar + '.png'" alt="Selected Avatar" class="avatar">
 
-        <div *ngIf="language=='de' && (selectedGoal=='buildMuscle' || selectedGoal=='both')">
+        <div *ngIf="language=='de' && (selectedGoal=='buildMuscles' || selectedGoal=='both')">
           <p style="text-align: center; margin-top: 3vh;">
             Heute steht Krafttraining an!
           </p>
         </div>
-        <div *ngIf="language=='en' && (selectedGoal=='buildMuscle' || selectedGoal=='both')">
+        <div *ngIf="language=='en' && (selectedGoal=='buildMuscles' || selectedGoal=='both')">
           <p style="text-align: center; margin-top: 3vh;">
             Today is Gymday!
           </p>
@@ -51,7 +51,7 @@
           </p>
         </div>
 
-        <table *ngIf="language=='de' && (selectedGoal=='buildMuscle' || selectedGoal=='both')" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+        <table *ngIf="language=='de' && (selectedGoal=='buildMuscles' || selectedGoal=='both')" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
           <tr>
               <th style="padding-bottom: 10px;">Muskelgruppe</th>
               <th style="padding-bottom: 10px;">Übung</th>
@@ -120,7 +120,7 @@
     </tr>
       </table>
 
-      <table *ngIf="language=='en' && (selectedGoal=='buildMuscle' || selectedGoal=='both')" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
+      <table *ngIf="language=='en' && (selectedGoal=='buildMuscles' || selectedGoal=='both')" style="margin-top: 5vh; margin-bottom: 20px; font-size: 14px; margin-left: auto; margin-right: auto;">
         <tr>
             <th style="padding-bottom: 10px;">Musclegroup</th>
             <th style="padding-bottom: 10px;">Exercise</th>
