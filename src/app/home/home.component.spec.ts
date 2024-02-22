@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomeComponent } from './home.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Firestore } from '@angular/fire/firestore';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,10 +9,15 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
+      declarations: [HomeComponent],
+      imports: [RouterTestingModule],
+      providers: [
+        { provide: Firestore, useValue: {} } // Mock Firestore dependency
+      ]
+    }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -20,4 +26,17 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should switch language to German', () => {
+    component.switchToGerman();
+    expect(component.language).toEqual('de');
+  });
+
+  it('should switch language to English', () => {
+    component.switchToEnglish();
+    expect(component.language).toEqual('en');
+  });
+
+  // Add more test cases based on the component's methods and properties
+  
 });
