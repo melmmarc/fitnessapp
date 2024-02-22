@@ -21,6 +21,10 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { StartComponent } from './start/start.component';
 import { LoginComponent } from './login/login.component';
 
+
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +45,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxGoogleAnalyticsModule.forRoot('G-WVNFBHJK5Z'),
     provideFirebaseApp(() => initializeApp({"projectId":"fitapp-d26bf","appId":"1:544070609954:web:d72c25f5921b8cd8cdae7b","storageBucket":"fitapp-d26bf.appspot.com","apiKey":"AIzaSyAOPD_y22L4nge_QW_lgTwIfdpixFc4f90","authDomain":"fitapp-d26bf.firebaseapp.com","messagingSenderId":"544070609954","measurementId":"G-PXZQ9MZH50"})),
     provideFirestore(() => getFirestore()),
   ],
