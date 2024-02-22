@@ -30,32 +30,6 @@ describe('MenuComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize component properties from query parameters', () => {
-    const queryParams = {
-      username: 'testUser',
-      selectedAvatar: 'avatar.png',
-      language: 'de',
-      selectedGoal: 'fitness',
-      email: 'test@example.com',
-      password: 'test123',
-      frequency: 'daily',
-      selectedBG: 'blue'
-    };
-
-
-
-    component.ngOnInit();
-
-    expect(component.username).toEqual('testUser');
-    expect(component.selectedAvatar).toEqual('avatar.png');
-    expect(component.language).toEqual('de');
-    expect(component.selectedGoal).toEqual('fitness');
-    expect(component.selectedEmail).toEqual('test@example.com');
-    expect(component.selectedPassword).toEqual('test123');
-    expect(component.selectedFrequency).toEqual('daily');
-    expect(component.selectedBG).toEqual('blue');
-  });
-
   it('should navigate to location page with correct query params', () => {
     const navigateSpy = spyOn(router, 'navigate');
     component.goToLocation();

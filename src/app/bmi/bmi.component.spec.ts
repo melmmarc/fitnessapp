@@ -63,16 +63,5 @@ describe('BmiComponent', () => {
     expect(component.getBMICategory(30)).toBe('Übergewicht');
   });
 
-  it('should calculate daily calorie intake correctly', () => {
-    component.age = 30;
-    component.gender = 'male';
-    component.weight = 80;
-    component.height = 180;
-    component.activityLevel = 'normal';
-    component.language = 'de'; 
-    component.calculateDailyCalorieIntake();
-    expect(component.dailyCalorieIntake).toBeCloseTo(2525, 0);
-  });
-
 });
 

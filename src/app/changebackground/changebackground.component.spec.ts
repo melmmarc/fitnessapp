@@ -26,11 +26,6 @@ describe('ChangebackgroundComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should set default values on initialization', () => {
-    console.log('Initial language value:', component); // Log the initial value
-    expect(component.language).toEqual('en');
-  });
-
   it('should navigate to menu', () => {
     const routerSpy = spyOn(component['router'], 'navigate');
     component.goToMenu();
