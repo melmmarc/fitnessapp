@@ -3,6 +3,9 @@ import { ChangeusernameComponent } from './changeusername.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
+import { HomeComponent } from '../home/home.component';
+import { HeaderComponent } from '../header/header.component';
+import { CommonModule } from '@angular/common';
 
 describe('ChangeusernameComponent', () => {
   let component: ChangeusernameComponent;
@@ -12,8 +15,11 @@ describe('ChangeusernameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChangeusernameComponent ],
-      imports: [ RouterTestingModule ],
+      declarations: [ ChangeusernameComponent,
+        HomeComponent,
+        HeaderComponent, ],
+      imports: [ RouterTestingModule,
+        CommonModule ],
       providers: [
         {
           provide: ActivatedRoute,

@@ -1,20 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import { Router } from '@angular/router'; 
+import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { LoginComponent } from './login.component';
+import { HeaderComponent } from '../header/header.component';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-  let mockRouter: any;
+  let router: Router;
+  let activatedRoute: ActivatedRoute;
 
   beforeEach(async () => {
-    mockRouter = jasmine.createSpyObj('Router', ['navigate']);
-
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ],
-      imports: [ RouterTestingModule ],
+      declarations: [ HeaderComponent ],
+      imports: [ RouterTestingModule,
+        LoginComponent,
+         ],
       providers: [
         {
           provide: ActivatedRoute,
@@ -32,16 +33,16 @@ describe('LoginComponent', () => {
               })
             }
           }
-        },
-        { provide: Router, useValue: mockRouter }
+        }
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
+    router = TestBed.inject(Router);
+    activatedRoute = TestBed.inject(ActivatedRoute);
     fixture.detectChanges();
   });
 
@@ -68,8 +69,9 @@ describe('LoginComponent', () => {
   });
 
   it('should navigate to home page with correct query params', () => {
+    const navigateSpy = spyOn(component.router, 'navigate');
     component.goToHome();
-    expect(mockRouter.navigate).toHaveBeenCalledWith(['/home'], {
+    expect(navigateSpy).toHaveBeenCalledWith(['/home'], {
       queryParams: {
         username: 'testUser',
         selectedAvatar: 'avatar.png',
@@ -84,8 +86,9 @@ describe('LoginComponent', () => {
   });
 
   it('should navigate to menu page with correct query params', () => {
+    const navigateSpy = spyOn(component.router, 'navigate');
     component.goToMenu();
-    expect(mockRouter.navigate).toHaveBeenCalledWith(['/menu'], {
+    expect(navigateSpy).toHaveBeenCalledWith(['/menu'], {
       queryParams: {
         username: 'testUser',
         selectedAvatar: 'avatar.png',

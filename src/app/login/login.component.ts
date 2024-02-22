@@ -26,7 +26,7 @@ export class LoginComponent {
   dortmundBGselected:boolean = false;
   bayernBGselected:boolean = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(public router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {

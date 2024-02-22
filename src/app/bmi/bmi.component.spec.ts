@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { BmiComponent } from './bmi.component';
+import { HomeComponent } from '../home/home.component';
+import { HeaderComponent } from '../header/header.component';
 
 describe('BmiComponent', () => {
   let component: BmiComponent;
@@ -9,7 +11,8 @@ describe('BmiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BmiComponent],
+      declarations: [BmiComponent, 
+        HomeComponent, HeaderComponent],
       imports: [RouterTestingModule],
       providers: [
         {

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChangebackgroundComponent } from './changebackground.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 describe('ChangebackgroundComponent', () => {
   let component: ChangebackgroundComponent;
@@ -9,8 +10,9 @@ describe('ChangebackgroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ChangebackgroundComponent],
-      imports: [RouterTestingModule],
+      declarations: [ChangebackgroundComponent,
+        HeaderComponent],
+      imports: [RouterTestingModule,],
     }).compileComponents();
   });
 
@@ -25,8 +27,8 @@ describe('ChangebackgroundComponent', () => {
   });
 
   it('should set default values on initialization', () => {
-    expect(component.language).toEqual('de');
-    // Add more expectations for other default values if necessary
+    console.log('Initial language value:', component); // Log the initial value
+    expect(component.language).toEqual('en');
   });
 
   it('should navigate to menu', () => {

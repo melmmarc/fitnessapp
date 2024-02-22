@@ -2,14 +2,17 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Params, convertToParamMap } from '@angular/router';
 import { ChangepasswordComponent } from './changepassword.component';
-
+import { HomeComponent } from '../home/home.component';
+import { HeaderComponent } from '../header/header.component';
 describe('ChangepasswordComponent', () => {
   let component: ChangepasswordComponent;
   let fixture: ComponentFixture<ChangepasswordComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ChangepasswordComponent],
+      declarations: [ChangepasswordComponent,
+        HomeComponent, 
+        HeaderComponent],
       imports: [RouterTestingModule]
     })
     .compileComponents();

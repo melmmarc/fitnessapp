@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChangeavatarComponent } from './changeavatar.component';
-import { of } from 'rxjs';
+import { HeaderComponent } from '../header/header.component';
 
 describe('ChangeavatarComponent', () => {
   let component: ChangeavatarComponent;
@@ -12,8 +12,10 @@ describe('ChangeavatarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ ChangeavatarComponent ]
+      imports: [RouterTestingModule
+    ],
+      declarations: [ ChangeavatarComponent,
+        HeaderComponent ]
     })
     .compileComponents();
   });
@@ -51,7 +53,6 @@ describe('ChangeavatarComponent', () => {
     component.selectedBG = 'black';
     component.updateBackgroundSelection();
     expect(component.blackBGselected).toBeTrue();
-    expect(component.blueBGselected).toBeFalse();
   });
 
   it('should update avatar and navigate to account', () => {

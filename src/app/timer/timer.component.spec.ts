@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testin
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TimerComponent } from './timer.component';
+import { HeaderComponent } from '../header/header.component';
 
 describe('TimerComponent', () => {
   let component: TimerComponent;
@@ -11,7 +12,8 @@ describe('TimerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TimerComponent],
+      declarations: [TimerComponent,
+        HeaderComponent],
       imports: [RouterTestingModule]
     }).compileComponents();
   });

@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountComponent } from './account.component';
 import { of } from 'rxjs';
+import { HeaderComponent } from '../header/header.component';
 
 describe('AccountComponent', () => {
   let component: AccountComponent;
@@ -12,7 +13,8 @@ describe('AccountComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AccountComponent],
+      declarations: [AccountComponent,
+        HeaderComponent],
       imports: [RouterTestingModule],
       providers: [
         {

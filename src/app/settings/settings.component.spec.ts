@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SettingsComponent } from './settings.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { HeaderComponent } from '../header/header.component';
 
 describe('SettingsComponent', () => {
   let component: SettingsComponent;
@@ -7,7 +10,17 @@ describe('SettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SettingsComponent ]
+      declarations: [ SettingsComponent,
+        HeaderComponent ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+            }
+          }
+        }
+      ]
     }).compileComponents();
   });
 

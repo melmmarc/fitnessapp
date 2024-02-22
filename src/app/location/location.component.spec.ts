@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocationComponent } from './location.component';
 import { of } from 'rxjs';
+import { HeaderComponent } from '../header/header.component';
 
 describe('LocationComponent', () => {
   let component: LocationComponent;
@@ -12,7 +13,8 @@ describe('LocationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LocationComponent ],
+      declarations: [ LocationComponent,
+        HeaderComponent ],
       imports: [ RouterTestingModule.withRoutes([]) ]
     }).compileComponents();
   });
