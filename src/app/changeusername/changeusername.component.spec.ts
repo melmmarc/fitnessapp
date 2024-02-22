@@ -1,11 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChangeusernameComponent } from './changeusername.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { HomeComponent } from '../home/home.component';
 import { HeaderComponent } from '../header/header.component';
-import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 describe('ChangeusernameComponent', () => {
   let component: ChangeusernameComponent;
@@ -15,30 +14,28 @@ describe('ChangeusernameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChangeusernameComponent,
-        HomeComponent,
-        HeaderComponent, ],
-      imports: [ RouterTestingModule,
-        CommonModule ],
+      declarations: [ChangeusernameComponent,
+        HeaderComponent],
+      imports: [RouterTestingModule,
+        FormsModule],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
             queryParams: of({
-              username: 'testuser',
-              selectedAvatar: 'avatar1',
-              language: 'en',
-              selectedGoal: 'goal1',
+              username: 'testUser',
+              selectedAvatar: 'avatar.png',
+              language: 'de',
+              selectedGoal: 'fitness',
               email: 'test@example.com',
-              password: 'password123',
+              password: 'test123',
               frequency: 'daily',
               selectedBG: 'blue'
             })
           }
         }
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -53,42 +50,40 @@ describe('ChangeusernameComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should update background selection based on selectedBG value', () => {
-    expect(component.blueBGselected).toBeTruthy();
-    expect(component.blackBGselected).toBeFalsy();
-    expect(component.orangeBGselected).toBeFalsy();
-    expect(component.schalkeBGselected).toBeFalsy();
-    expect(component.dortmundBGselected).toBeFalsy();
-    expect(component.bayernBGselected).toBeFalsy();
-
-    component.selectedBG = 'black';
-    component.updateBackgroundSelection();
-
-    expect(component.blueBGselected).toBeFalsy();
-    expect(component.blackBGselected).toBeTruthy();
-    expect(component.orangeBGselected).toBeFalsy();
-    expect(component.schalkeBGselected).toBeFalsy();
-    expect(component.dortmundBGselected).toBeFalsy();
-    expect(component.bayernBGselected).toBeFalsy();
+  it('should initialize component properties from query parameters', () => {
+    expect(component.username).toEqual('testUser');
+    expect(component.selectedAvatar).toEqual('avatar.png');
+    expect(component.language).toEqual('de');
+    expect(component.selectedGoal).toEqual('fitness');
+    expect(component.selectedEmail).toEqual('test@example.com');
+    expect(component.selectedPassword).toEqual('test123');
+    expect(component.selectedFrequency).toEqual('daily');
+    expect(component.selectedBG).toEqual('blue');
   });
 
-  it('should navigate to menu page', () => {
-    spyOn(router, 'navigate').and.stub();
+  it('should update background selection based on selectedBG', () => {
+    component.selectedBG = 'black';
+    component.updateBackgroundSelection();
+    expect(component.blackBGselected).toBe(true);
+    expect(component.orangeBGselected).toBe(false);
+  });
 
-    component.goToMenu();
-
-    expect(router.navigate).toHaveBeenCalledWith(['/menu'], {
+  it('should navigate to account page after changing username', () => {
+    const navigateSpy = spyOn(router, 'navigate');
+    component.newUsername = 'newUser';
+    component.changeUsername();
+    expect(component.username).toEqual('newUser');
+    expect(navigateSpy).toHaveBeenCalledWith(['/account'], {
       queryParams: {
-        username: 'testuser',
-        selectedAvatar: 'avatar1',
-        language: 'en',
-        selectedGoal: 'goal1',
+        username: 'newUser',
+        selectedAvatar: 'avatar.png',
+        language: 'de',
+        selectedGoal: 'fitness',
         email: 'test@example.com',
-        password: 'password123',
+        password: 'test123',
         frequency: 'daily',
-        selectedBG: 'blue'
+        selectedBG: 'blue',
       }
     });
   });
-
 });

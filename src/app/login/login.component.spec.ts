@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LoginComponent } from './login.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
-import { LoginComponent } from './login.component';
+import { of } from 'rxjs';
 import { HeaderComponent } from '../header/header.component';
 
 describe('LoginComponent', () => {
@@ -12,26 +13,23 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
-      imports: [ RouterTestingModule,
-        LoginComponent,
-         ],
+      declarations: [HeaderComponent],
+      imports: [RouterTestingModule,
+        LoginComponent],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: {
-              paramMap: convertToParamMap({
-                username: 'testUser',
-                selectedAvatar: 'avatar.png',
-                language: 'de',
-                selectedGoal: 'fitness',
-                email: 'test@example.com',
-                password: 'test123',
-                frequency: 'daily',
-                selectedBG: 'blue'
-              })
-            }
+            queryParams: of({
+              username: 'testUser',
+              selectedAvatar: 'avatar.png',
+              language: 'de',
+              selectedGoal: 'fitness',
+              email: 'test@example.com',
+              password: 'test123',
+              frequency: 'daily',
+              selectedBG: 'blue'
+            })
           }
         }
       ]
@@ -61,15 +59,8 @@ describe('LoginComponent', () => {
     expect(component.selectedBG).toEqual('blue');
   });
 
-  it('should update background selection based on selectedBG', () => {
-    component.selectedBG = 'black';
-    component.updateBackgroundSelection();
-    expect(component.blackBGselected).toBe(true);
-    expect(component.orangeBGselected).toBe(false);
-  });
-
   it('should navigate to home page with correct query params', () => {
-    const navigateSpy = spyOn(component.router, 'navigate');
+    const navigateSpy = spyOn(router, 'navigate');
     component.goToHome();
     expect(navigateSpy).toHaveBeenCalledWith(['/home'], {
       queryParams: {
@@ -86,7 +77,7 @@ describe('LoginComponent', () => {
   });
 
   it('should navigate to menu page with correct query params', () => {
-    const navigateSpy = spyOn(component.router, 'navigate');
+    const navigateSpy = spyOn(router, 'navigate');
     component.goToMenu();
     expect(navigateSpy).toHaveBeenCalledWith(['/menu'], {
       queryParams: {

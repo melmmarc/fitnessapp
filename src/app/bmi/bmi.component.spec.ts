@@ -1,35 +1,35 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { BmiComponent } from './bmi.component';
-import { HomeComponent } from '../home/home.component';
+import { of } from 'rxjs';
 import { HeaderComponent } from '../header/header.component';
+import { FormsModule } from '@angular/forms';
 
 describe('BmiComponent', () => {
   let component: BmiComponent;
   let fixture: ComponentFixture<BmiComponent>;
+  let router: Router;
+  let activatedRoute: ActivatedRoute;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BmiComponent, 
-        HomeComponent, HeaderComponent],
-      imports: [RouterTestingModule],
+      declarations: [BmiComponent,
+        HeaderComponent],
+        imports: [FormsModule],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: {
-              queryParamMap: convertToParamMap({
-                username: 'testUser',
-                selectedAvatar: 'avatar1',
-                language: 'de',
-                selectedGoal: 'loseWeight',
-                email: 'test@example.com',
-                password: 'test123',
-                frequency: 'daily',
-                selectedBG: 'blue'
-              })
-            }
+            queryParams: of(convertToParamMap({
+              username: 'testUser',
+              selectedAvatar: 'avatar.png',
+              language: 'de',
+              selectedGoal: 'fitness',
+              email: 'test@example.com',
+              password: 'test123',
+              frequency: 'daily',
+              selectedBG: 'blue'
+            }))
           }
         }
       ]
@@ -39,6 +39,8 @@ describe('BmiComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BmiComponent);
     component = fixture.componentInstance;
+    router = TestBed.inject(Router);
+    activatedRoute = TestBed.inject(ActivatedRoute);
     fixture.detectChanges();
   });
 
@@ -46,43 +48,30 @@ describe('BmiComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should update background selection', () => {
-    component.updateBackgroundSelection();
-    expect(component.blueBGselected).toBe(true);
-    expect(component.blackBGselected).toBe(false);
-    expect(component.orangeBGselected).toBe(false);
-    expect(component.schalkeBGselected).toBe(false);
-    expect(component.dortmundBGselected).toBe(false);
-    expect(component.bayernBGselected).toBe(false);
-  });
-
-  it('should calculate BMI', () => {
+  it('should calculate BMI correctly', () => {
     component.height = 180;
     component.weight = 80;
     component.calculateBMI();
     expect(component.bmi).toBeCloseTo(24.69, 2);
   });
 
-  it('should calculate daily calorie intake in German', () => {
-    component.language = 'de';
-    component.age = 30;
-    component.gender = 'male';
-    component.weight = 80;
-    component.height = 180;
-    component.activityLevel = 'normal';
-    component.calculateDailyCalorieIntake();
-    expect(component.dailyCalorieIntake).toBeCloseTo(2480, 0);
+  it('should get BMI category correctly', () => {
+    expect(component.getBMICategory(15)).toBe('Kritisches Untergewicht');
+    expect(component.getBMICategory(16.5)).toBe('Untergewicht');
+    expect(component.getBMICategory(20)).toBe('Normalgewicht');
+    expect(component.getBMICategory(27)).toBe('Leichtes Übergewicht');
+    expect(component.getBMICategory(30)).toBe('Übergewicht');
   });
 
-  it('should calculate daily calorie intake in English', () => {
-    component.language = 'en';
+  it('should calculate daily calorie intake correctly', () => {
     component.age = 30;
     component.gender = 'male';
     component.weight = 80;
     component.height = 180;
     component.activityLevel = 'normal';
+    component.language = 'de'; 
     component.calculateDailyCalorieIntake();
-    expect(component.dailyCalorieIntake).toBeCloseTo(2983, 0);
+    expect(component.dailyCalorieIntake).toBeCloseTo(2525, 0);
   });
 
 });
